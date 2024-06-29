@@ -1,5 +1,6 @@
 import { title } from '../const.js'
 import '../styles/Home.css';
+import Footer from './Footer.jsx';
 
 export default function Home() {
     return (
@@ -36,11 +37,7 @@ export default function Home() {
         </main>
     
         <footer>
-        <div className="footer">
-            <p>Copyright © 2024</p>
-            <p>Franck Fongang</p>
-            <p>All rights Reserved</p>
-        </div>
+            <Footer />
         </footer>
 
         </>
