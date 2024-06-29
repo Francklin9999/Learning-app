@@ -1,3 +1,4 @@
+import { title } from '../const.js'
 import '../styles/Home.css';
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
             <img src="" alt="logo" className="logo" />
             <div className="title">
             <h1>Welcome. Happy to see you here!</h1>
-            <h2>Start Learning now!</h2>
+            <h2>Start Learning {title}!</h2>
             </div>
             <div>
                 <a href="/login" className="button">
