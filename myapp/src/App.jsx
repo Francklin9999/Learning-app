@@ -1,5 +1,6 @@
 import './App.css';
 import Home from './components/Home';
+import Lesson from './components/Lesson';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Learn from './components/Learn';
@@ -13,6 +14,7 @@ export default function App() {
         
         <Routes>
 
+          <Route path="/Lesson" element={<Lesson />} />
           <Route path="/login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/learn" element={<Learn />} />
