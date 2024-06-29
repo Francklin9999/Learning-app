@@ -1,5 +1,6 @@
 import {title, language} from '../const.js';
 import '../styles/Learn.css';
+import Sidebar from '/.Sidebar';
 
 
 export default function Learn() {
