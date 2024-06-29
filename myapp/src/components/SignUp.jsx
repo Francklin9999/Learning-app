@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Footer from './Footer';
 import '../styles/SignUp';
 
 export default function SignUp() {
@@ -15,6 +16,7 @@ export default function SignUp() {
     }
 
     return (
+        <>
         <div className="SignUp">
             <form onSumbit={handleSubmit}>
                 <div className="email">
@@ -46,5 +48,7 @@ export default function SignUp() {
                 </div>
             </form>
         </div>
+        <Footer />
+        </>
     )
 }

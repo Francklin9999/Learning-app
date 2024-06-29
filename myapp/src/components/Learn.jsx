@@ -1,4 +1,5 @@
-import {title, language} from '../const.js';
+import {title, language} from '../const';
+import Footer from './Footer';
 import '../styles/Learn.css';
 import Sidebar from '/.Sidebar';
 
@@ -19,10 +20,7 @@ export default function Learn() {
             <main>
 
             </main>
-
-            <footer>
-
-            </footer>
+            <Footer />
         </>
     )
 }

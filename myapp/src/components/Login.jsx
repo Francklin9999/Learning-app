@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Footer from './Footer';
 import '../styles/Login.css';
 
 
@@ -16,6 +17,7 @@ export default function Login() {
 
 
     return (
+        <>
         <div>
             <form onSubmit={handleSubmit}>
                 <div>
@@ -38,5 +40,7 @@ export default function Login() {
                 </div>
             </form>
         </div>
+        <Footer />
+        </>
     );
 }

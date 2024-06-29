@@ -1,6 +1,6 @@
-import { title } from '../const.js'
+import { title } from '../const'
 import '../styles/Home.css';
-import Footer from './Footer.jsx';
+import Footer from './Footer';
 
 export default function Home() {
     return (
