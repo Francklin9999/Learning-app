@@ -1,2 +1,2 @@
-export const title = "Pekan";
-export const language = "Taguana";
+export const title = "Franck";
+export const language = "French";

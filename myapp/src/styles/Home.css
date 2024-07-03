@@ -1,0 +1,49 @@
+.header{
+    height: 20vh;
+}
+
+.main{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-content{
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.button{
+    display: block;
+    margin: 10px;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    display: block;
+    margin: 20px;
+}
+
+.button-account{
+    background-color: aqua;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-radius: 15px;
+    margin-bottom: 0%;
+}
+
+.button-noaccount{
+    background-color: aqua;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 8%;
+    padding-right: 8%;
+    border-radius: 15px;
+}

@@ -1,0 +1,16 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  #root {
+    height: 100%;
+  }
+  
+  body {
+    background-image: url('../public/vectorstock_1999390.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  

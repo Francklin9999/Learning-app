@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Footer from './Footer';
-import '../styles/SignUp';
+import '../styles/SignUp.css';
 
 export default function SignUp() {
     const [email, setEmail] = useState('');

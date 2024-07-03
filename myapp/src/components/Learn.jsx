@@ -1,7 +1,7 @@
 import {title, language} from '../const';
 import Footer from './Footer';
 import '../styles/Learn.css';
-import Sidebar from '/.Sidebar';
+import Sidebar from './Sidebar';
 
 
 export default function Learn() {
