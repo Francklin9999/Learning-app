@@ -5,30 +5,26 @@ import Footer from './Footer';
 export default function Home() {
     return (
         <>
-        <header>
-        <div className="home-header">
-            <img src="" alt="logo" className="home-logo" />
-            <div className="home-title">
-            <h1>Welcome to Franck</h1>
-            <h2>Start Learning {title} now!</h2>
+        <header className="home-header">
+            <div className="home-header-title">
+                <h2>Franck</h2>
             </div>
-            <div>
-                <a href="/login" className="home-button">
-                <p>Sign up</p>
-                <p>Log In</p>
-                </a>
+            <div className="home-header-content">
+                <h2>Start Learning now!</h2>
             </div>
-        </div>
+            <div className="home-header-details">
+            <div className="home-header-details-login"><a href="/login" className="home-header-details-login-a"><p>Log In</p></a></div>
+                <div className="home-header-details-signup"><a href="/SignUp"  className="home-header-details-signup-a"><p>Sign up</p></a></div>
+            </div>
         </header>
 
-        <main>
-            <div className="home-main">
+        <main className="home-main">
                 {/* <img src="" alt="background" clasName="background" /> */}
-                <div className="home-container-fluid" id="home-main-content">
-                    <div className="row">
+                <div className="container-fluid" id="home-main-content">
+                    <div className="row" id="home-main-title">
                         <h1>Start to learn today!</h1>
                     </div>
-                    <div className="row">
+                    <div className="col" id="home-main-buttons">
                         <a href="/login" className="home-button button-account">
                             <p>Log In</p>
                         </a>
@@ -42,10 +38,9 @@ export default function Home() {
                         </a>
                     </div>
                 </div>
-            </div>
         </main>
     
-        <footer>
+        <footer className="home-footer">
             <Footer />
         </footer>
 

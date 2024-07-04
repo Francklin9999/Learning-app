@@ -1,41 +1,124 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-.home-header{
-    height: 20vh;
+.home-header {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: brown;
 }
 
-.home-main{
-    height: 70vh;
+.home-header-title {
+    width: 10%;
+}
+
+.home-header-content {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-header-details {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.home-header-details-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25%;
+    padding: 5%;
+    background-color: white;
+}
+
+.home-header-details-signup-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border-radius: 5px;
+}
+
+.home-header-details-signup-a p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.home-header-details-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25%;
+    padding: 5%;
+    background-color: orange;
+}
+
+.home-header-details-login-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border-radius: 5px;
+}
+
+.home-header-details-login-a p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.home-main {
+    height: 84vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#home-main-content{
+.home-footer {
+    height: 10vh;
+}
+
+#home-main-content {
     width: 100%;
     background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.home-button{
+#home-main-buttons {
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+}
+
+.home-button {
     display: block;
     margin: 10px;
+    background-color: grey;
+    padding: 1%;
+    margin: 1%;
 }
 
-.home-row{
+.home-row {
     display: flex;
     justify-content: center;
 }
 
-.home-button{
+.home-button {
     display: block;
     margin: 20px;
 }
 
-.home-button-account{
+.home-button-account {
     background-color: aqua;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -45,7 +128,7 @@
     margin-bottom: 0%;
 }
 
-.home-button-noaccount{
+.home-button-noaccount {
     background-color: aqua;
     padding-top: 1%;
     padding-bottom: 1%;
