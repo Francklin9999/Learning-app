@@ -8,7 +8,7 @@ body, html {
   }
   
   body {
-    background-image: url('../public/vectorstock_1999390.jpg');
+    background-image: url('vectorstock_1999390.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
