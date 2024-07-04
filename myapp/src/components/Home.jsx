@@ -3,6 +3,7 @@ import '../styles/Home.css';
 import Footer from './Footer';
 
 export default function Home() {
+
     return (
         <>
         <header className="home-header">
@@ -19,7 +20,6 @@ export default function Home() {
         </header>
 
         <main className="home-main">
-                {/* <img src="" alt="background" clasName="background" /> */}
                 <div className="container-fluid" id="home-main-content">
                     <div className="row" id="home-main-title">
                         <h1>Start to learn today!</h1>
