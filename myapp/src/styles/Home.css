@@ -4,38 +4,38 @@
     box-sizing: border-box;
   }
 
-.header{
+.home-header{
     height: 20vh;
 }
 
-.main{
+.home-main{
     height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#main-content{
+#home-main-content{
     width: 100%;
     background-color: aliceblue;
 }
 
-.button{
+.home-button{
     display: block;
     margin: 10px;
 }
 
-.row{
+.home-row{
     display: flex;
     justify-content: center;
 }
 
-.button{
+.home-button{
     display: block;
     margin: 20px;
 }
 
-.button-account{
+.home-button-account{
     background-color: aqua;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -45,7 +45,7 @@
     margin-bottom: 0%;
 }
 
-.button-noaccount{
+.home-button-noaccount{
     background-color: aqua;
     padding-top: 1%;
     padding-bottom: 1%;

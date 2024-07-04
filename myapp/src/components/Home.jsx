@@ -6,14 +6,14 @@ export default function Home() {
     return (
         <>
         <header>
-        <div className="header">
-            <img src="" alt="logo" className="logo" />
-            <div className="title">
+        <div className="home-header">
+            <img src="" alt="logo" className="home-logo" />
+            <div className="home-title">
             <h1>Welcome to Franck</h1>
             <h2>Start Learning {title} now!</h2>
             </div>
             <div>
-                <a href="/login" className="button">
+                <a href="/login" className="home-button">
                 <p>Sign up</p>
                 <p>Log In</p>
                 </a>
@@ -22,22 +22,22 @@ export default function Home() {
         </header>
 
         <main>
-            <div className="main">
+            <div className="home-main">
                 {/* <img src="" alt="background" clasName="background" /> */}
-                <div className="container-fluid" id="main-content">
+                <div className="home-container-fluid" id="home-main-content">
                     <div className="row">
                         <h1>Start to learn today!</h1>
                     </div>
                     <div className="row">
-                        <a href="/login" className="button button-account">
+                        <a href="/login" className="home-button button-account">
                             <p>Log In</p>
                         </a>
-                        <a href="/SignUp" className="button button-account">
+                        <a href="/SignUp" className="home-button button-account">
                             <p>Sign Up</p>
                         </a>
                     </div>
                     <div className="row">
-                        <a href="/learn" className="button button-noaccount">
+                        <a href="/learn" className="home-button button-noaccount">
                             <p>Continue without an account</p>
                         </a>
                     </div>

@@ -2,19 +2,19 @@ import '../styles/PasswordReset.css';
 
 export default function PasswordReset() {
     return (
-        <div className="form-container">
-            <div className="logo-container">Forgot Password</div>
+        <div className="passwordreset-form-container">
+            <div className="passwordreset-logo-container">Forgot Password</div>
 
-            <form className="form">
-                <div className="form-group">
+            <form className="passwordreset-form">
+                <div className="passwordreset-form-group">
                     <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Enter your email" required/>
+                <input type="text" id="passwordreset-email" name="email" placeholder="Enter your email" required/>
                 </div>
 
-                <button className="form-submit-btn" type="submit">Send Email</button>
+                <button className="passwordreset-form-submit-btn" type="submit">Send Email</button>
             </form>
 
-            <p className="signup-link">Don't have an account?<a href="/SignUp" className="signup-link link"> Sign up now</a></p>
+            <p className="passwordreset-signup-link">Don't have an account?<a href="/SignUp" className="passwordreset-signup-link link"> Sign up now</a></p>
         </div>
     )
 }

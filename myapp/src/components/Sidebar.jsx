@@ -18,7 +18,7 @@ export default function Sidebar(props) {
         if (isConnected) {
             return (
                 setOptions(
-                <ul className="options">
+                <ul className="sidebar-options">
                     <li><a href="/">Home</a></li>
                     <li><a href="/Account">Account</a></li>
                     <li><a href="/">Log out</a></li>
@@ -30,7 +30,7 @@ export default function Sidebar(props) {
             } else {
                 return (
                     setOptions(
-                    <ul className="options">
+                    <ul className="sidebar-options">
                     <li><a href="/">Home</a></li>
                     <li><a href="/">Login</a></li>
                     <li><a href="/">Sign Up</a></li>
@@ -46,7 +46,7 @@ export default function Sidebar(props) {
             <button className="sidebar-btn" onClick={toggleSidebar}>
             </button>
             <div>
-                <div className={`sidebar ${sidebar ? 'open' : 'close'}`}>
+                <div className={`sidebar-sidebar ${sidebar ? 'sidebar-open' : 'sidebar-close'}`}>
                 <button className="sidebar-btn" onClick={toggleSidebar}>
                 </button>
                 { content }

@@ -17,9 +17,9 @@ export default function SignUp() {
 
     return (
         <>
-        <div className="SignUp">
+        <div className="SignUp-SignUp">
             <form onSumbit={handleSubmit}>
-                <div className="email">
+                <div className="SignUp-email">
                     <label htmlFor="email">Email</label>
                     <input
                     type="email"
@@ -28,7 +28,7 @@ export default function SignUp() {
                     value={email} onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
-                <div className="username">
+                <div className="SignUp-username">
                     <label htmlFor="username">Username</label>
                     <input
                     type="text"
@@ -37,7 +37,7 @@ export default function SignUp() {
                     value={username} onChange={(e) => setUsername(e.target.value)}
                     />
                 </div>
-                <div className="password">
+                <div className="SignUp-password">
                     <label htmlFor="password">Password</label>
                     <input
                     type="password"
