@@ -1,16 +1,15 @@
 import {title, language} from '../const';
+import Sidebar from './Sidebar';
 import Footer from './Footer';
 import '../styles/Learn.css';
-import Sidebar from './Sidebar';
 
 
 export default function Learn() {
     
-    return(
+    return (
         <>
-            <Sidebar/>
-
-            <header>
+            <header className="header">
+                <Sidebar/>
                 <div className="title">
                     <h1>{title}</h1>
                 </div>
@@ -20,7 +19,8 @@ export default function Learn() {
             <main>
 
             </main>
+
             <Footer />
         </>
-    )
+    );
 }

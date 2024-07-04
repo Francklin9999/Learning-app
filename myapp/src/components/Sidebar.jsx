@@ -1,29 +1,57 @@
-import '../styles/Sidebar.css';
 import { useState } from 'react';
+import '../styles/Sidebar.css';
 
-export default function Sidebar() {
+export default function Sidebar(props) {
     const [sidebar, setSidebar] = useState(false);
+    const [content, setOptions] = useState('');
 
     const toggleSidebar = () => {
         setSidebar(!sidebar);
+        if (!sidebar) {
+            return options(false);
+        } else {
+            return;
+        }
     };
+
+    const options = (isConnected) => {
+        if (isConnected) {
+            return (
+                setOptions(
+                <ul className="options">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Account">Account</a></li>
+                    <li><a href="/">Log out</a></li>
+                    <li><a href="/terms">Terms & Condition</a></li>
+                </ul>
+                )
+            )
+            
+            } else {
+                return (
+                    setOptions(
+                    <ul className="options">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Login</a></li>
+                    <li><a href="/">Sign Up</a></li>
+                    <li><a href="/terms">Terms & Condition</a></li>
+                    </ul>
+                    )
+                )
+            }
+    }
 
     return (
         <div>
-            <div className="sidebar-btn" onClick={toggleSidebar}>
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
-            </div>
+            <button className="sidebar-btn" onClick={toggleSidebar}>
+            </button>
             <div>
-                <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-                    <ul>
-                        <li><a href="#option1">Option 1</a></li>
-                        <li><a href="#option2">Option 2</a></li>
-                        <li><a href="#option3">Option 3</a></li>
-                    </ul>
+                <div className={`sidebar ${sidebar ? 'open' : 'close'}`}>
+                <button className="sidebar-btn" onClick={toggleSidebar}>
+                </button>
+                { content }
                 </div>
             </div>
         </div>
-    )
+    );
 }
