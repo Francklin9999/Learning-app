@@ -8,7 +8,7 @@ export default function PasswordReset() {
             <form className="form">
                 <div className="form-group">
                     <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Enter your email" required="" />
+                <input type="text" id="email" name="email" placeholder="Enter your email" required/>
                 </div>
 
                 <button className="form-submit-btn" type="submit">Send Email</button>

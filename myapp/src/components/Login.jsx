@@ -19,7 +19,7 @@ export default function Login() {
     }
 
     const handleClick = () => {
-        navigate("/SignUp");
+        navigate("/PasswordReset");
     }
 
 

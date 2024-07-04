@@ -1,0 +1,103 @@
+.lesson {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lesson-form-container {
+    height: 50%;
+    width: 30%;
+    background-color: #fff;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #212121;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+  }
+  
+  .lesson-form-container button:active {
+    scale: 0.95;
+  }
+  
+  .lesson-form-container .lesson-logo-container {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .lesson-form-container .lesson-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .lesson-form-container .lesson-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .lesson-form-container .lesson-form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .lesson-form-container .lesson-form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-family: inherit;
+    border: 1px solid #ccc;
+  }
+  
+  .lesson-form-container .lesson-form-group input::placeholder {
+    opacity: 0.5;
+  }
+  
+  .lesson-form-container .lesson-form-group input:focus {
+    outline: none;
+    border-color: #1778f2;
+  }
+  
+.lesson-form-container .lesson-form-submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    color: #fff;
+    background-color: #212121;
+    border: none;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin: 12px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+  
+.lesson-correct-answer {
+    background-color: green;
+    color: white;
+}
+
+
+#lesson-clicked {
+    background-color: green;
+    color: white;
+}
+
+.lesson-question-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
