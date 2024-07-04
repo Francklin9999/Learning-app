@@ -6,6 +6,18 @@
     align-items: center;
 }
 
+.lesson-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 80%;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+
 .lesson-form-container {
     height: 50%;
     width: 30%;

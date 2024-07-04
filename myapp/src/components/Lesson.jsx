@@ -21,7 +21,6 @@ export default function Lesson(props) {
         const isAnswerCorrect = index === questions[currentQuestionIndex][5];
         setSelectedAnswer(index);
         setIsCorrect(isAnswerCorrect);
-        setIsClicked(true);
 
         if (isAnswerCorrect) {
             setIsClicked(true);
@@ -38,27 +37,29 @@ export default function Lesson(props) {
 
     return (
         <>
-        <Sidebar />
-        <div className="lesson-lesson">
-            <div className="lesson-form-container">
-                <div className="lesson-logo-container">{question}</div>
-                <form className="lesson-form" onSubmit={(e) => e.preventDefault()}>
-                    {questions[currentQuestionIndex].slice(1, 5).map((choice, index) => (
-                        <button
-                            key={index}
-                            className="lesson-form-submit-btn"
-                            id={index + 1 === questions[currentQuestionIndex][5] ? "lesson-clicked" : ''}
-                            type="button"
-                            onClick={() => handleChoiceClick(index + 1)}
-                        >
-                            {choice}
-                        </button>
-                    ))}
-                    <p className="lesson-question-count">Question: {currentQuestionIndex}/{questions.length}</p>
-                </form>
+            <div className="lesson-lesson">
+                <div className="lesson-sidebar">
+                    <Sidebar />
+                </div>
+                <div className="lesson-form-container">
+                    <div className="lesson-logo-container">{question}</div>
+                    <form className="lesson-form" onSubmit={(e) => e.preventDefault()}>
+                        {questions[currentQuestionIndex].slice(1, 5).map((choice, index) => (
+                            <button
+                                key={index}
+                                className="lesson-form-submit-btn"
+                                id={index + 1 === questions[currentQuestionIndex][5] && isClicked ? "lesson-clicked" : ''}
+                                type="button"
+                                onClick={() => handleChoiceClick(index + 1)}
+                            >
+                                {choice}
+                            </button>
+                        ))}
+                        <p className="lesson-question-count">Question: {currentQuestionIndex}/{questions.length}</p>
+                    </form>
+                </div>
             </div>
-        </div>
-        <Footer />
+            <Footer />
         </>
         
     )

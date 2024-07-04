@@ -10,7 +10,7 @@ export default function Sidebar(props) {
         if (!sidebar) {
             return options(false);
         } else {
-            return;
+            return setOptions('');
         }
     };
 

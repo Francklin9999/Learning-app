@@ -1,51 +1,54 @@
 .sidebar-sidebar {
+    background-color: aqua;
     height: 100%;
     width: 250px;
     position: fixed;
-    top: 0;
-    left: -250px;
-    background-color: #111;
+    background-color: #0db938;
     overflow-x: hidden;
     transition: 0.3s;
     padding-top: 60px;
-  }
+}
   
-  .sidebar-sidebar.open {
+.sidebar-sidebar .sidebar-open {
     left: 0;
-  }
+}
+
+.sidebar-sidebar .sidebar-closed {
+  left: -250px;
+}
   
-  .sidebar-sidebar ul {
+.sidebar-sidebar ul {
     list-style-type: none;
     padding: 0;
-  }
+}
   
-  .sidebar-sidebar ul li {
+.sidebar-sidebar ul li {
     padding: 8px 16px;
     text-align: left;
-  }
+}
   
-  .sidebar-sidebar ul li a {
+.sidebar-sidebar ul li a {
     color: white;
     text-decoration: none;
     display: block;
-  }
+}
   
-  .sidebar-sidebar ul li a:hover {
+.sidebar-sidebar ul li a:hover {
     background-color: #575757;
-  }
+}
   
-  .sidebar-menu-button {
+.sidebar-menu-button {
     position: fixed;
     top: 15px;
     left: 15px;
     cursor: pointer;
-  }
+}
   
-  .sidebar-menu-button .bar {
+.sidebar-menu-button .bar {
     width: 25px;
     height: 3px;
     background-color: black;
     margin: 4px 0;
     transition: 0.4s;
-  }
+}
   
