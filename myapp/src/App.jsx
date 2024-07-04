@@ -14,7 +14,7 @@ export default function App() {
         
         <Routes>
 
-          <Route path="/Lesson" element={<Lesson />} />
+          <Route path="/lesson" element={<Lesson />} />
           <Route path="/login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/learn" element={<Learn />} />

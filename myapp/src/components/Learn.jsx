@@ -8,9 +8,9 @@ export default function Learn() {
     
     return (
         <>
-            <header className="header">
+            <header className="header2">
                 <Sidebar/>
-                <div className="title">
+                <div className="title2">
                     <h1>{title}</h1>
                 </div>
                 
