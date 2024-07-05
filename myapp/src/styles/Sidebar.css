@@ -1,23 +1,100 @@
-.sidebar-sidebar {
-    background-color: aqua;
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    background-color: #0db938;
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 60px;
-}
-  
-.sidebar-sidebar .sidebar-open {
+.sidebar-sidebar-open {
+    width: 240px;
+    background-color: rgb(113, 81, 143);
+    position: absolute;
+    height: 100vh;
+    padding: 0 30px;
     left: 0;
+    transition: all 0.3s;
 }
 
-.sidebar-sidebar .sidebar-closed {
-  left: -250px;
+.sidebar-sidebar-closed {
+  width: 240px;
+  background-color:  rgb(113, 81, 143);
+  position: absolute;
+  height: 100vh;
+  padding: 0 30px;
+  transition: all 0.5s;
+  left: -100%;
+}
+
+.sidebar-menuToggle {
+    background-color: white;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.sidebar-menuToggle button {
+    background-color: white;
+    border: none;
+}
+
+#sidebar-checkbox {
+    display: none;
 }
   
-.sidebar-sidebar ul {
+.sidebar-toggle {
+    position: relative;
+    width: 40px;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    height: calc(4px * 3 + 11px * 2);
+}
+  
+.sidebar-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: calc(4px / 2);
+    background: #7b52b9;
+    background: #020202;
+    color: inherit;
+    opacity: 1;
+    transition: none 0.35s cubic-bezier(.5,-0.35,.35,1.5) 0s;
+}
+  
+  /***** Tornado Animation *****/
+  
+.sidebar-bar--top {
+    bottom: calc(50% + 11px + 4px/ 2);
+    transition-property: bottom,transform;
+    transition-delay: calc(0s + 0.35s) * .6;
+}
+  
+.sidebar-bar--middle {
+    top: calc(50% - 4px/ 2);
+    transition-property: opacity,transform;
+    transition-delay: calc(0s + 0.35s * .3);
+}
+  
+.sidebar-bar--bottom {
+    top: calc(50% + 11px + 4px/ 2);
+    transition-property: top,transform;
+    transition-delay: 0s;
+}
+  
+#sidebar-checkbox:checked + .sidebar-toggle .sidebar-bar--top {
+    transform: rotate(-135deg);
+    transition-delay: 0s;
+    bottom: calc(50% - 4px/ 2);
+}
+  
+#sidebar-checkbox:checked + .sidebar-toggle .sidebar-bar--middle {
+    opacity: 0;
+    transform: rotate(-135deg);
+    transition-delay: calc(0s + 0.35s * .3);
+}
+  
+#sidebar-checkbox:checked + .sidebar-toggle .sidebar-bar--bottom {
+    top: calc(50% - 4px/ 2);
+    transform: rotate(-225deg);
+    transition-delay: calc(0s + 0.35s * .6);
+}
+  
+/* .sidebar-sidebar ul {
     list-style-type: none;
     padding: 0;
 }
@@ -51,4 +128,4 @@
     margin: 4px 0;
     transition: 0.4s;
 }
-  
+   */
