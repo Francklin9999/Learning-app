@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Sidebar from './Sidebar';
 import Footer from './Footer';
 import '../styles/SignUp.css';
 
@@ -21,6 +22,7 @@ export default function SignUp() {
 
     return (
         <>
+        <Sidebar />
         <div className="signup-content">
             <form className="singup-form">
                 <div className="signup-top">

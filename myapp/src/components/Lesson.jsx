@@ -37,8 +37,8 @@ export default function Lesson(props) {
 
     return (
         <>
-        <Sidebar />
             <div className="lesson-lesson">
+            <Sidebar />
                 <div className="lesson-form-container">
                     <div className="lesson-logo-container">{question}</div>
                     <form className="lesson-form" onSubmit={(e) => e.preventDefault()}>

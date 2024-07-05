@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Sidebar from './Sidebar';
 import Footer from './Footer';
 import '../styles/Login.css';
 
@@ -25,6 +26,7 @@ export default function Login() {
 
     return (
         <>
+        <Sidebar />
         <div className="login-main-content">
             <form className="login-form_container" onSubmit={handleSubmit}>
                 <div className="login-logo_container"></div>
