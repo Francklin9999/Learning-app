@@ -3,22 +3,22 @@ import '../styles/Sidebar.css';
 
 export default function Sidebar(props) {
     const [sidebar, setSidebar] = useState(false);
-    const [content, setOptions] = useState('');
+    const [content, setContent] = useState('');
 
     const toggleSidebar = () => {
         setSidebar(!sidebar);
-        if (!sidebar) {
-            return options(false);
-        } else {
-            return setOptions('');
-        }
+        // if (!sidebar) {
+        //     return options(false);
+        // } else {
+        //     return setContent('');
+        // }
     };
 
     const options = (isConnected) => {
         if (isConnected) {
             return (
-                setOptions(
-                <ul className="sidebar-options">
+                setContent(
+                <ul className="sidebar-Content">
                     <li><a href="/">Home</a></li>
                     <li><a href="/Account">Account</a></li>
                     <li><a href="/">Log out</a></li>
@@ -29,8 +29,8 @@ export default function Sidebar(props) {
             
             } else {
                 return (
-                    setOptions(
-                    <ul className="sidebar-options">
+                    setContent(
+                    <ul className="sidebar-Content">
                     <li><a href="/">Home</a></li>
                     <li><a href="/">Login</a></li>
                     <li><a href="/">Sign Up</a></li>

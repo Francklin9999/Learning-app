@@ -3,7 +3,7 @@
   height: 90vh;
   display: flex;
   justify-content: center;
-  padding-top: 5%;
+  align-items: center;
 }
 
 .login-form_container {
@@ -21,6 +21,7 @@
     0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
   border-radius: 11px;
   font-family: "Inter", sans-serif;
+  border: 1px solid #333;
 }
 
 .login-logo_container {
@@ -140,6 +141,7 @@
   filter: drop-shadow(0px 1px 0px #efefef)
     drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
   cursor: pointer;
+  margin-bottom: 14px;
 }
 
 .login-separator {

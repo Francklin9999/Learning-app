@@ -75,7 +75,6 @@ export default function Login() {
                     </div>
 
                     <div>
-                    <p>No account? Sign up now!</p>
                     <button title="Sign In" type="submit" className="login-sign-up" onClick={handleClick}>
                         {/* <svg preserveAspectRatio="xMidYMid" version="1.1" viewBox="0 0 256 315" height="20px" width="16px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
                         <g>
