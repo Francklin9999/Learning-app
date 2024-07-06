@@ -17,11 +17,11 @@ export default function Lesson(props) {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [question, setQuestion] = useState(questions[0][0]);
     const [isClicked, setIsClicked] = useState(false);
-    const [currentSelection, setCurrentSelecion] = useState(null);
+    const [currentSelection, setCurrentSelection] = useState(null);
     const [score, setScore] = useState(0);
 
     const handleChoiceClick = (index) => {
-        setCurrentSelecion(index);
+        setCurrentSelection(index);
         const isCorrect = index === questions[currentQuestionIndex][5];
         setIsClicked(true);
         const nextIndex = (currentQuestionIndex + 1);
