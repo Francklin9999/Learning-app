@@ -27,11 +27,11 @@ export default function Sidebar(props) {
         if (isConnected) {
             return (
                 setContent(
-                <ul className="sidebar-Content">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/Account">Account</a></li>
-                    <li><a href="/">Log out</a></li>
-                    <li><a href="/terms">Terms & Condition</a></li>
+                <ul className="sidebar-content">
+                    <li className="sidebar-content-options"><a href="/">Home</a></li>
+                    <li className="sidebar-content-options"><a href="/Account">Account</a></li>
+                    <li className="sidebar-content-options"><a href="/">Log out</a></li>
+                    <li className="sidebar-content-options"><a href="/terms">Terms & Condition</a></li>
                 </ul>
                 )
             )
@@ -39,11 +39,11 @@ export default function Sidebar(props) {
             } else {
                 return (
                     setContent(
-                    <ul className="sidebar-Content">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">Login</a></li>
-                    <li><a href="/">Sign Up</a></li>
-                    <li><a href="/terms">Terms & Condition</a></li>
+                    <ul className="sidebar-content">
+                    <li className="sidebar-content-options"><a href="/">Home</a></li>
+                    <li className="sidebar-content-options"><a href="/">Login</a></li>
+                    <li className="sidebar-content-options"><a href="/">Sign Up</a></li>
+                    <li className="sidebar-content-options"><a href="/terms">Terms & Condition</a></li>
                     </ul>
                     )
                 )
