@@ -25,7 +25,7 @@ export default function Home() {
                 <h2>Franck</h2>
             </div>
             <div className="home-header-content">
-                <h2>Start Learning now!</h2>
+                <h2>Learn a new language today!</h2>
             </div>
             <div className="home-header-details">
                 <div className="home-header-details-login"><button onClick={handleLogin}>Login</button></div>
@@ -49,33 +49,30 @@ export default function Home() {
                 </div>
             </div>
                 <div className="container-fluid" id="home-main-content">
-                    <div>
-                        <h1 className="home-main-content-title">Why learn a language?</h1>
-                    </div>
                     <div className="home-main-content-content">
+                        <h1 >Why learn a language?</h1>
                         <p>
-                            Learning a language is a great way to improve your communication skills, expand your cultural
-                            understanding, and open up new opportunities for travel, work, and personal growth. With {title
-                            }, you can learn a variety of languages at your own pace, with interactive lessons and exercises
-                            that make learning fun and engaging. Whether you're a beginner or an experienced language learner,
-                            {title} has something to offer for everyone.
+                            Learning a new language can significantly benefit employees and the overall success of a company. At our company, we are constantly expanding and engaging with a diverse client base, making multilingual capabilities increasingly essential. Here are some key reasons why language learning is particularly advantageous in our context:
+                            Firstly, improved communication with clients and partners is a primary benefit. Many of our clients speak languages other than English, and being able to converse in their native language can build stronger, more trustful relationships. This can lead to enhanced customer satisfaction and loyalty, giving us a competitive edge in the market.
+                            Secondly, language skills open up new markets and business opportunities. As we aim to expand our global presence, having team members who are proficient in various languages allows us to navigate and penetrate new regions more effectively. It enables us to understand cultural nuances, comply with local regulations, and tailor our services to meet regional needs.
+                            Thirdly, learning a new language fosters cultural sensitivity and awareness. This is vital in our diverse workplace and client interactions. Employees who understand different cultures can work more collaboratively and innovatively, contributing to a more inclusive and dynamic work environment.
+                            Moreover, personal and professional growth is another significant advantage. Language learning enhances cognitive abilities, such as problem-solving and multitasking, which can improve overall job performance. It also provides employees with a sense of achievement and can boost morale and job satisfaction.
+                            In conclusion, investing in language learning is not just an individual asset but a strategic business decision. It equips our company to communicate more effectively, explore new markets, and foster a culturally aware and inclusive workplace, ultimately driving our long-term success.
                         </p>
                     </div>
                     <div className="row" id="home-main-title">
-                        <h1>So what are you waiting for? <br></br>
+                        <h1 className="home-main-title-content">So what are you waiting for? <br></br>
                         Start learning today!</h1>
                     </div>
                     <div className="col" id="home-main-buttons">
-                        <a href="/login" className="home-button button-account">
+                        <a href="/login" className="home-button-button-account">
                             <p>Log In</p>
                         </a>
-                        <a href="/SignUp" className="home-button button-account">
-                            <p>Sign Up</p>
-                        </a>
-                    </div>
-                    <div className="row">
-                        <a href="/learn" className="home-button button-noaccount">
+                        <a href="/learn" className="home-button-button-account">
                             <p>Continue without an account</p>
+                        </a>
+                        <a href="/SignUp" className="home-button-button-account">
+                            <p>Sign Up</p>
                         </a>
                     </div>
                 </div>
