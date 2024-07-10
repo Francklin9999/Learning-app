@@ -21,12 +21,8 @@ export default function Home() {
     return (
         <div className="home">
         <header className="home-header">
-            <div className="home-header-title">
-                <h2>Franck</h2>
-            </div>
-            <div className="home-header-content">
-                <h2>Learn a new language today!</h2>
-            </div>
+            <h2 className="home-header-title">Franck</h2>
+            <h2 className="home-header-content">Learn a new language today!</h2>
             <div className="home-header-details">
                 <div className="home-header-details-login"><button onClick={handleLogin}>Login</button></div>
                 <div className="home-header-details-signup"><button onClick={handleSignUp}>Sign up</button></div>
@@ -77,9 +73,9 @@ export default function Home() {
                     </div>
                 </div>
         </main>
-    
+        <footer className="home-footer">
             <Footer />
-
+        </footer>
         </div>
     );
 }

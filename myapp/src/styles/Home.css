@@ -1,9 +1,11 @@
 .home {
     height: 150vh;
+    width: 100%;
 }
 
 .home-header {
     height: 6vh;
+    width: 100%;
     display: flex;
     align-items: center;
     padding-left: 3%;
@@ -12,44 +14,49 @@
 }
 
 .home-main {
-    height: 80%;
+    height: 134vh;
 }
 
+.home-footer {
+    height: 10vh;
+    padding: 0;
+}
+
+/* Header */
 
 .home-header-title {
-    width: 10%;
+    width: 15%;
+    font-size: 2vw;
 }
 
 .home-header-content {
-    background-color: black;
-    width: 90%;
+    width: 70%;
+    font-size: 2vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .home-header-details {
-    background-color: black;
-    width: 10%;
+    width: 15%;
+    height: 1%;
+    border-color: aqua;
     display: flex;
     align-items: center;
     justify-content: center;
     justify-content: space-between;
 }
 
-
-
 .home-header-details-login {
-    width: 50%;
-    height: 50%;
+    width: 1vw;
 }
 
 .home-header-details-login button {
-    padding: 12% 25%;
+    padding: 1rem 2rem;
     border: 0;
-    border-radius: 30%;
+    border-radius: 12rem;
     background-color: #2ba8fb;
-    color: #ffffff;
+    color: black;
     font-weight: Bold;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -70,23 +77,23 @@
 }
 
 .home-header-details-singup {
-    width: 50%;
-    height: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
 }
 
 .home-header-details-signup button {
-    padding: 12.5% 30%;
+    padding: 1rem 2rem;
     border: 0;
-    border-radius: 40%;
+    border-radius: 12rem;
     background-color: black;
-    color: white;
+    color: #2ba8fb;
     font-weight: Bold;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
 
 .home-header-details-signup button:hover {
-    background-color: #6fc5ff;
+    background-color: rgb(2, 2, 2);
     box-shadow: 0 0 20px #6fc5ff50;
     transform: scale(1.1);
 }
@@ -100,10 +107,6 @@
 }
       
 
-
-.home-footer {
-    height: 100px;
-}
 
 #home-main-content {
     width: 100%;
