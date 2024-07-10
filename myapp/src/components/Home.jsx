@@ -19,7 +19,7 @@ export default function Home() {
     }
 
     return (
-        <>
+        <div className="home">
         <header className="home-header">
             <div className="home-header-title">
                 <h2>Franck</h2>
@@ -80,6 +80,6 @@ export default function Home() {
     
             <Footer />
 
-        </>
+        </div>
     );
 }

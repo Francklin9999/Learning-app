@@ -1,6 +1,6 @@
 .sidebar-sidebar-open {
     width: 240px;
-    background-color: rgb(113, 81, 143);
+    background-color: var(--primary-color);
     position: fixed;
     top: 0;
     height: 90vh;

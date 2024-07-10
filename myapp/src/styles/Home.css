@@ -1,3 +1,7 @@
+.home {
+    height: 150vh;
+}
+
 .home-header {
     height: 6vh;
     display: flex;
@@ -7,48 +11,33 @@
     background-color: white;
 }
 
+.home-main {
+    height: 80%;
+}
+
+
 .home-header-title {
     width: 10%;
 }
 
 .home-header-content {
-    width: 75%;
+    background-color: black;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .home-header-details {
-    width: 15%;
+    background-color: black;
+    width: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
     justify-content: space-between;
 }
 
-/* .home-header-details-signup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25%;
-    padding: 5%;
-    background-color: white;
-}
 
-.home-header-details-signup-a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    border-radius: 5px;
-}
-
-.home-header-details-signup-a p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-} */
 
 .home-header-details-login {
     width: 50%;
@@ -110,26 +99,6 @@
     transform: scale(0.98);
 }
       
-
-
-/* .home-header-details-login-a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    border-radius: 5px;
-}
-
-.home-header-details-login-a p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-} */
-
-.home-main {
-    height: 1300px;
-}
 
 
 .home-footer {

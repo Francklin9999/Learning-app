@@ -1,12 +1,13 @@
 .footer-footer {
-    height: 10vh; 
-    background-color: #f8f9fa;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    font-size: 20px;
-    margin: 0;
-  }
-
+  height: 10vh;
+  width: 100%;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
   
   

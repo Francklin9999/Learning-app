@@ -1,19 +1,26 @@
+:root {
+  --primary-color : rgb(113, 81, 143);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body, html {
     height: 100%;
     margin: 0;
   }
   
-  #root {
-    height: 100%;
-  }
-  
-  body {
-    position: relative;
-    background-image: url('background1.jpg'), url('background2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat, repeat-y;
+body {
+  position: relative;
+  background-image: url('background1.jpg'), url('background2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat, repeat-y;
 }
+
 
 
 
