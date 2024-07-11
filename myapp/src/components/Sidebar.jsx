@@ -2,19 +2,6 @@ import { useState } from 'react';
 import '../styles/Sidebar.css';
 
 export default function Sidebar(props) {
-    // return (
-    //     <div className="sidebar-sidebar active">
-    //         <img src="../country-pics/Capture.PNG" className="logo" atl="logo" />
-    //         <ul>
-    //             <li><a href="/">Home</a></li>
-    //             <li><a href="/">Log in</a></li>
-    //             <li><a href="/">about us</a></li>
-    //             <li><a href="/">Contact Us</a></li>
-    //         </ul>
-    //     </div>
-    // );
-
-
     const [sidebar, setSidebar] = useState(false);
     const [content, setContent] = useState('');
 

@@ -7,33 +7,30 @@
     padding: 0 30px;
     left: 0;
     transition: all 0.3s;
+    z-index: 1000;
 }
 
 .sidebar-sidebar-closed {
   width: 240px;
-  background-color:  rgb(113, 81, 143);
+  background-color:  var(--primary-color);
   position: fixed;
-  height: 100vh;
+  top: 0;
+  height: 90vh;
   padding: 0 30px;
-  transition: all 0.5s;
+  transition: all 2s;
   left: -100%;
-}
-
-.sidebar-menuToggle {
-    background-color: white;
-    display: flex;
-    justify-content: left;
-    align-items: left;
+  z-index: 1000;
 }
 
 .sidebar-menuToggle button {
     position: fixed;
     margin-top: 1%;
+    margin-left: 1%;
     top: 0;
     left: 0;
     background: none;
     border: none;
-    z-index: 1100;
+    z-index: 10000;
 }
 
 #sidebar-checkbox {
@@ -59,7 +56,7 @@
     background: #020202;
     color: inherit;
     opacity: 1;
-    transition: none 0.35s cubic-bezier(.5,-0.35,.35,1.5) 0s;
+    transition: none 0.1s cubic-bezier(.5,-0.35,.35,1.5) 0s;
 }
   
   /***** Tornado Animation *****/
@@ -121,38 +118,3 @@
     border-radius: 15%;
 }
   
-/* .sidebar-sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-  
-.sidebar-sidebar ul li {
-    padding: 8px 16px;
-    text-align: left;
-}
-  
-.sidebar-sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-  
-.sidebar-sidebar ul li a:hover {
-    background-color: #575757;
-}
-  
-.sidebar-menu-button {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    cursor: pointer;
-}
-  
-.sidebar-menu-button .bar {
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    margin: 4px 0;
-    transition: 0.4s;
-}
-   */
