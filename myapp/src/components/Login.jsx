@@ -90,7 +90,6 @@ export default function Login() {
                     <a href="/terms" className="login-note">Terms of use &amp; Conditions</a>
             </form>
         </div>
-        <Footer />
         </>
     );
 }

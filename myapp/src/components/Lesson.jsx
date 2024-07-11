@@ -61,7 +61,6 @@ export default function Lesson(props) {
                     </form>
                 </div>
             </div>
-            <Footer />
         </>
         
     )
