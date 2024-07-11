@@ -7,6 +7,7 @@ import Learn from './components/Learn';
 import Footer from './components/Footer';
 import PasswordReset from './components/PasswordReset';
 import ErrorPage from './components/ErrorPage';
+import Terms from './components/Terms';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/learn" element={<Learn />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="/" element={<Home />} />
           <Route path="/*" element={<ErrorPage />} />
 
