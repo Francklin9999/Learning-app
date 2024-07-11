@@ -28,8 +28,8 @@ export default function Sidebar(props) {
                     setContent(
                     <ul className="sidebar-content">
                     <li className="sidebar-content-options"><a href="/">Home</a></li>
-                    <li className="sidebar-content-options"><a href="/">Login</a></li>
-                    <li className="sidebar-content-options"><a href="/">Sign Up</a></li>
+                    <li className="sidebar-content-options"><a href="/login">Login</a></li>
+                    <li className="sidebar-content-options"><a href="/signup">Sign Up</a></li>
                     <li className="sidebar-content-options"><a href="/terms">Terms & Condition</a></li>
                     </ul>
                     )
