@@ -23,14 +23,16 @@ export default function Home() {
         <header className="home-header">
             <h2 className="home-header-title">Franck</h2>
             <h2 className="home-header-content">Learn a new language today!</h2>
-            <div className="home-header-details">
-                <div className="home-header-details-login"><button onClick={handleLogin}>Login</button></div>
-                <div className="home-header-details-signup"><button onClick={handleSignUp}>Sign up</button></div>
-            </div>
+            <nav className="home-header-details">
+                <div className="home-header-info">
+                <div className="home-header-details-login"><a href="/login">Log in</a></div>
+                <div className="home-header-details-signup"><a href="/login">Sign up</a></div>
+                </div>
+            </nav>
         </header>
 
         <main className="home-main">
-            <div className="container home-main-container">
+            <div className="home-main-container">
                 <div>
                     <h1 className="home-main-title">Learn a variety of languages with {title} -- fast, easy and fun!</h1>
                 </div>
@@ -44,8 +46,8 @@ export default function Home() {
                     <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/Capture10.PNG"/><p>Turk</p></button></div>
                 </div>
             </div>
-                <div className="container-fluid" id="home-main-content">
-                    <div className="home-main-content-content">
+                <div className="home-second-container">
+                    <div className="home-second-container-container">
                         <h1 >Why learn a language?</h1>
                         <p>
                             Learning a new language can significantly benefit employees and the overall success of a company. At our company, we are constantly expanding and engaging with a diverse client base, making multilingual capabilities increasingly essential. Here are some key reasons why language learning is particularly advantageous in our context:
@@ -56,20 +58,20 @@ export default function Home() {
                             In conclusion, investing in language learning is not just an individual asset but a strategic business decision. It equips our company to communicate more effectively, explore new markets, and foster a culturally aware and inclusive workplace, ultimately driving our long-term success.
                         </p>
                     </div>
-                    <div className="row" id="home-main-title">
+                    <div className="home-second-title">
                         <h1 className="home-main-title-content">So what are you waiting for? <br></br>
                         Start learning today!</h1>
-                    </div>
-                    <div className="col" id="home-main-buttons">
-                        <a href="/login" className="home-button-button-account">
-                            <p>Log In</p>
-                        </a>
-                        <a href="/learn" className="home-button-button-account">
-                            <p>Continue without an account</p>
-                        </a>
-                        <a href="/SignUp" className="home-button-button-account">
-                            <p>Sign Up</p>
-                        </a>
+                        <div className="home-main-buttons">
+                            <a href="/login" className="home-button-button-account">
+                                <p>Log In</p>
+                            </a>
+                            <a href="/learn" className="home-button-button-account">
+                                <p>Continue without an account</p>
+                            </a>
+                            <a href="/SignUp" className="home-button-button-account">
+                                <p>Sign Up</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
         </main>

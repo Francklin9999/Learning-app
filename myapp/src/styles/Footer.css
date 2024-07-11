@@ -1,12 +1,12 @@
 .footer-footer {
-  height: 10vh;
+  height: 100%;
   width: 100%;
   background-color: #f8f9fa;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  font-size: 20px;
+  font-size: 1.7rem;
 }
   
   
