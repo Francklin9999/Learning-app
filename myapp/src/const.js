@@ -84,17 +84,53 @@ export const questions = {
     },
 
     french : {
-        basic : {
-
+        basic: {
+            question1: ["Quel est le pluriel de 'chien'?", "chiens", "chienes", "chien's", "chiens'", 1],
+            question2: ["Quel pronom remplace 'Marie' dans 'Marie mange une pomme'?", "Elle", "Il", "Nous", "Vous", 1],
+            question3: ["Quel est l'infinitif du verbe 'mangé'?", "manger", "mangé", "mangera", "mange", 1],
+            question4: ["Choisissez l'adjectif dans cette phrase: 'Le chat est noir.'", "chat", "est", "noir", "le", 3],
+            question5: ["Quel mot est un verbe?", "jouer", "maison", "rapide", "bien", 1],
+            question6: ["Complétez: Il _____ au marché.", "va", "vont", "vas", "aller", 1],
+            question7: ["Quel est le contraire de 'grand'?", "petit", "gros", "haut", "énorme", 1],
+            question8: ["Quel est le féminin de 'acteur'?", "acteurs", "actrice", "acteure", "acteur's", 2],
+            question9: ["Quel est le passé simple de 'chanter'?", "chantai", "chantas", "chanta", "chanté", 3],
+            question10: ["Quel est le pluriel de 'fille'?", "filles", "fillez", "fille's", "fillas", 1]
         },
-        medium : {
-
+        medium: {
+            question1: ["Choisissez la bonne forme: Il _____ les devoirs tous les jours.", "fait", "fais", "faient", "faits", 1],
+            question2: ["Quel est le participe passé de 'voir'?", "vu", "voir", "voyé", "vont", 1],
+            question3: ["Quel mot est un adjectif?", "rapidement", "joyeux", "manger", "chante", 2],
+            question4: ["Complétez: Nous _____ au cinéma hier soir.", "allons", "allé", "allez", "sommes allés", 4],
+            question5: ["Quel est un synonyme de 'content'?", "triste", "heureux", "fâché", "fatigué", 2],
+            question6: ["Quel est le comparatif de 'bon'?", "meilleur", "bonner", "plus bon", "bonner", 1],
+            question7: ["Quel mot est un nom?", "rapidement", "maison", "manger", "joli", 2],
+            question8: ["Choisissez l'article correct: _____ orange est mûre.", "Un", "Le", "Une", "La", 3],
+            question9: ["Complétez: Elle _____ depuis deux heures.", "travaille", "travailler", "travailles", "travaillant", 1],
+            question10: ["Quel est le superlatif de 'petit'?", "plus petit", "petitissime", "le plus petit", "moins petit", 3]
         },
-        advanced : {
-
+        advanced: {
+            question1: ["Lequel des suivants est un verbe irrégulier?", "parler", "marcher", "aller", "jouer", 3],
+            question2: ["Complétez: Si j'_____ riche, je voyagerais autour du monde.", "étais", "étais", "suis", "sois", 1],
+            question3: ["Que signifie l'expression 'casser les pieds'?", "Danser", "Ennuyer quelqu'un", "Casser des pieds", "Être content", 2],
+            question4: ["Choisissez la bonne phrase:", "Elle ne aime pas les pommes.", "Elle n'aime pas les pommes.", "Elle aime pas les pommes.", "Elle ne pas aime les pommes.", 2],
+            question5: ["Quel est le contraire de 'facile'?", "difficile", "simple", "léger", "dur", 1],
+            question6: ["Complétez: Malgré _____ tard, il est arrivé à l'heure.", "partir", "partis", "partit", "être parti", 4],
+            question7: ["Quel est le gérondif de 'manger'?", "mangeant", "mangé", "mangera", "manger", 1],
+            question8: ["Quelle phrase est à la voix passive?", "Le chef a cuisiné le repas.", "Le repas a été cuisiné par le chef.", "Le chef cuisine le repas.", "Le chef cuisinera le repas.", 2],
+            question9: ["Choisissez la forme correcte: Elle _____ le film avant.", "voit", "vu", "a vu", "voyait", 3],
+            question10: ["Que signifie 'omniprésent'?", "rare", "présent partout", "inconnu", "limité", 2]
         },
-        native : {
-
+        native: {
+            question1: ["Quel mot est synonyme de 'éphémère'?", "éternel", "passager", "important", "substantiel", 2],
+            question2: ["Complétez: Le PDG était connu pour son style de leadership ______.", "autocratique", "autocrate", "auto-crate", "auto-critique", 1],
+            question3: ["Que signifie 'à la pointe'?", "obsolète", "avancé et innovant", "terne et démodé", "fondamental et basique", 2],
+            question4: ["Choisissez la bonne phrase:", "Les données ont été soigneusement analysées par les scientifiques.", "Les donnée étaient soigneusement analysées par les scientifiques.", "Les données étaient soigneusement analysées par les scientifiques.", "Les données sont soigneusement analysées par les scientifiques.", 3],
+            question5: ["Que signifie 'juxtaposition'?", "séparation", "contraste", "combinaison", "isolement", 2],
+            question6: ["Complétez: Le travail de l'artiste est souvent décrit comme ______.", "banal", "prosaïque", "avant-gardiste", "ordinaire", 3],
+            question7: ["Quel mot est un antonyme de 'sociable'?", "réservé", "amical", "sortant", "sympathique", 1],
+            question8: ["Choisissez la bonne forme: _______ des membres du comité étaient en faveur de la nouvelle politique.", "La plupart", "Beaucoup", "Plusieurs", "Un peu", 1],
+            question9: ["Que signifie 'perspicace'?", "ayant une grande perspicacité", "manque de clarté", "lent à comprendre", "incapable de voir", 1],
+            question10: ["Complétez: Son argument était convaincant et bien ______.", "articulé", "articulée", "articulatif", "articulant", 1]
         },
     },
 
