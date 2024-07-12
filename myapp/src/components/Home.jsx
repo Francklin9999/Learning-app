@@ -24,10 +24,8 @@ export default function Home() {
             <h2 className="home-header-title">Franck</h2>
             <h2 className="home-header-content">Learn a new language today!</h2>
             <nav className="home-header-details">
-                <div className="home-header-info">
                 <div className="home-header-details-login"><a href="/login">Log in</a></div>
                 <div className="home-header-details-signup"><a href="/login">Sign up</a></div>
-                </div>
             </nav>
         </header>
 

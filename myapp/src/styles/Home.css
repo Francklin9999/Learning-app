@@ -13,6 +13,7 @@
     flex: 0 0 6vh;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 0.5rem;
     background-color: white;
@@ -50,8 +51,9 @@
 .home-header-details {
     width: 20%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 3.5rem 0 3.5rem;
+    padding: 0 2vw 0 2vw;
 }
 
 .home-header-info {
@@ -111,9 +113,13 @@
 }
 
 .home-main-title {
+    width: 96vw;
     display: flex;
     text-align: center;
     justify-content: center;
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    margin: 0 1.5rem 0 1.rem;;
     color: white;
     font-size: 5.5rem;
 }
@@ -188,13 +194,14 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin: 6vh 0vw 0vh 0vw;
 }
 
 .home-main-buttons {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 0 15vw 0 15vw;
+    padding: 6vh 15vw 0 15vw;
 }
 
 .home-button-button-account {
@@ -204,7 +211,7 @@
     background-color: var(--primary-color);
     color: white;
     border-radius: 30px;
-    padding: 1rem 1rem 0.5rem 1rem;
+    padding: 1vw 1vw 0.5vw 1vw;
 }
 
 .home-button-button-account:hover,
