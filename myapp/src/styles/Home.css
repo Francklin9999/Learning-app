@@ -3,7 +3,7 @@
 }
 
 .home {
-    height: 150vh;
+    height: 150%;
     width: 100%;
     display: flex;
     flex-direction: column;
