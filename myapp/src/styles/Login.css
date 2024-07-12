@@ -7,13 +7,14 @@
 }
 
 .login-form_container {
-  width: 22%;
+  width: 80%;
   height: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 1vh;
+  margin: 0% 35% 0% 35%;
   padding: 4% 4% 4% 4%;
   background-color: #ffffff;
   box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
@@ -39,7 +40,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 1vh;
 }
 
 .login-title {
@@ -63,7 +64,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.2vh;
 }
 
 .login-icon {
@@ -132,7 +133,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 50px;
   background: #212121;
   border-radius: 7px;
   outline: none;
@@ -165,4 +166,22 @@
   font-size: 0.75rem;
   color: #8B8E98;
   text-decoration: underline;
+}
+
+.login-returntomenu {
+  background-color: white;
+  border-radius: 12px;
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+  padding: 1rem;
+}
+
+.login-returntomenu a {
+  color: var(--primary-color);
+}
+
+.login-returntomenu:hover,
+.login-returntomenu:focus {
+  transform: scale(1.2);
 }
