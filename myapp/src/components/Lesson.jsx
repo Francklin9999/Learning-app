@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
-import Footer from './Footer';
 import '../styles/Lesson.css';
 
 export default function Lesson(props) {
@@ -19,6 +18,7 @@ export default function Lesson(props) {
     const [isClicked, setIsClicked] = useState(false);
     const [currentSelection, setCurrentSelection] = useState(null);
     const [score, setScore] = useState(0);
+    const [percentage, setPercentage] = useState(0);
 
     const handleChoiceClick = (index) => {
         setCurrentSelection(index);
@@ -36,11 +36,16 @@ export default function Lesson(props) {
             setIsClicked(false);
         }, 1000);
     };
+
+    useEffect(() => {
+        const calculatedPercentage = ((score / currentQuestionIndex) * 100).toFixed(1);
+        setPercentage(calculatedPercentage);
+    }, [currentQuestionIndex]);
     
     return (
         <>
-            <div className="lesson-lesson">
             <Sidebar />
+            <div className="lesson-lesson">
                 <div className="lesson-form-container">
                     <div className="lesson-logo-container">{question}</div>
                     <form className="lesson-form" onSubmit={(e) => e.preventDefault()}>
@@ -57,7 +62,7 @@ export default function Lesson(props) {
                                 {choice}
                             </button>
                         ))}
-                        <p className="lesson-question-count">Score: {score}/{currentQuestionIndex} | Pourcentage%</p>
+                        <p className="lesson-question-count">Score: {score}/{currentQuestionIndex} | {percentage}%</p>
                     </form>
                 </div>
             </div>
