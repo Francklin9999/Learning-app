@@ -57,7 +57,7 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="home-second-title">
-                        <h1 className="home-main-title-content">So what are you waiting for? <br></br>
+                        <h1 className="home-second-title-content">So what are you waiting for? <br></br>
                         Start learning today!</h1>
                         <div className="home-main-buttons">
                             <a href="/login" className="home-button-button-account">
