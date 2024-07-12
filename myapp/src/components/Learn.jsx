@@ -13,7 +13,7 @@ export default function Learn() {
     const [selectedLevel, setSelectedLevel] = useState(null);
     const [selectedLanguage, setSelectedLanguage] = useState(null);
 
-    const items = ['Ivory', 'Spanish', 'English', 'French', 'Dutch', 'Portuguese', 'Turk'];
+    const items = ['Tagbana', 'Spanish', 'English', 'French', 'Dutch', 'Portuguese', 'Turk'];
 
     const milestones = [
         { title: 'Basic', description: 'Learn the basics' },
