@@ -237,17 +237,53 @@ export const questions = {
     },
     
     turk : {
-        basic : {
-
+        basic: {
+            question1: ["'Köpek' kelimesinin çoğul hali nedir?", "köpekler", "köpeker", "köpekçikler", "köpeğin", 1],
+            question2: ["Aşağıdakilerden hangisi bir meyvedir?", "Havuç", "Patates", "Elma", "Brokoli", 3],
+            question3: ["'Koşmak' fiilinin geçmiş zamanı hangisidir?", "koştum", "koştu", "koşarak", "koşar", 2],
+            question4: ["'Sıcak' kelimesinin zıt anlamlısı nedir?", "soğuk", "ılık", "serin", "ısınma", 1],
+            question5: ["Hangi kelime bir isim (isim)dir?", "hızlı", "mutluluk", "güzel", "koşmak", 2],
+            question6: ["Boşluğu doldurun: O bir kitap _______.", "okur", "okuyor", "okudu", "okurdu", 1],
+            question7: ["Açık bir günün gökyüzü rengi nedir?", "mavi", "yeşil", "kırmızı", "sarı", 1],
+            question8: ["Hangisi bir memeli hayvandır?", "Yılan", "Kurbağa", "Balina", "Balık", 3],
+            question9: ["Alfabetin ilk harfi nedir?", "Z", "B", "C", "A", 4],
+            question10: ["2 + 2 kaç eder?", "3", "4", "5", "6", 2]
         },
-        medium : {
-
+        medium: {
+            question1: ["Doğru formu seçin: O her gün okula __________.", "gider", "git", "gittik", "gidiyor", 1],
+            question2: ["'Görmek' fiilinin birleşik zaman (partisip) hali nedir?", "gördüm", "görüyorum", "görüldü", "görülmüş", 1],
+            question3: ["Hangi kelime bir sıfat (sıfat) dir?", "hızlı", "mutlu", "koşmak", "güzel", 2],
+            question4: ["Boşluğu doldurun: Biz dün gece sinemaya _______.", "gidiyoruz", "gittik", "gideceğiz", "git", 2],
+            question5: ["'Mutlu' kelimesinin eşanlamlısı nedir?", "üzgün", "neşeli", "sinirli", "yorgun", 2],
+            question6: ["'İyi' kelimesinin karşılaştırma derecesi nedir?", "daha iyi", "en iyi", "çok iyi", "iyi fazla", 1],
+            question7: ["Hangi kelime bir fiil (fiil) dir?", "hızlı", "mutlu", "yüzmek", "güzel", 3],
+            question8: ["Doğru belirli tanımlayıcıyı seçin: _____ elma kırmızıdır.", "Bir", "O", "Bu", "A", 1],
+            question9: ["Boşluğu doldurun: O iki saattir _______.", "çalışmak", "çalışır", "çalışmış", "çalışıyor", 4],
+            question10: ["'Küçük' kelimesinin üstünlük derecesi nedir?", "daha küçük", "en küçük", "çok küçük", "en küçük", 2]
         },
-        advanced : {
-
+        advanced: {
+            question1: ["Hangisi düzensiz bir fiildir?", "konuşmak", "yürümek", "gitmek", "oynamak", 3],
+            question2: ["Boşluğu doldurun: Eğer zengin _______ , dünyayı gezerim.", "oldum", "oldu", "olsam", "olduğum", 3],
+            question3: ["'Buzları kırmak' deyimi ne anlama gelir?", "Buzları kırmak", "Birini güldürmek", "Sosyal bir ortamda konuşmaya başlamak", "Bir ilişkiyi bitirmek", 3],
+            question4: ["Doğru cümleyi seçin:", "O elmalardan hoşlanmıyor.", "O elmayı sevmiyor.", "O elmayı sevmedi.", "O elma sevmiyor.", 1],
+            question5: ["'Karmaşık' kelimesinin zıt anlamı nedir?", "kolay", "zor", "basit", "ağır", 1],
+            question6: ["Boşluğu doldurun: _______ geç de olsa, zamanında geldi.", "çıktı", "çıkarak", "çıkmak", "çıkış", 1],
+            question7: ["'Yüzmek' kelimesinin mastarı nedir?", "yüzen", "yüzmüş", "yüzer", "yüzerek", 4],
+            question8: ["Hangi cümle edilgen yapıdadır?", "Şef yemeği pişirdi.", "Yemek şef tarafından pişirildi.", "Şef yemeği pişiriyor.", "Şef yemeği pişirecek.", 2],
+            question9: ["Doğru formu seçin: O filmi daha önce _______.", "gördü", "görmek", "görülmüş", "görüyor", 1],
+            question10: ["'Yaygın' kelimesinin anlamı nedir?", "nadiren", "her yerde var olan", "bilinmeyen", "sınırlı", 2]
         },
-        native : {
-
-        },
+        native: {
+            question1: ["'Kısa ömürlü' kelimesinin eş anlamlısı nedir?", "sonsuz", "geçici", "önemli", "önemli", 2],
+            question2: ["Boşluğu doldurun: CEO liderlik tarzıyla _______ olarak bilinirdi.", "otokratik", "otokrat", "oto-kritik", "otokritik", 1],
+            question3: ["'Öncü olmak' deyimi ne anlama gelir?", "geride kalmış", "ileri ve yenilikçi", "sıkıcı ve modası geçmiş", "temel ve basit", 2],
+            question4: ["Doğru cümleyi seçin:", "Veriler bilim adamları tarafından dikkatlice analiz edildi.", "Veri dikkatlice analiz edildi.", "Veri dikkatlice analiz edildi.", "Veri dikkatlice analiz edilecek.", 1],
+            question5: ["'Karşıtlık' ne anlama gelir?", "ayrılma", "karşıtlık", "kombinasyon", "izolasyon", 2],
+            question6: ["Boşluğu doldurun: Sanatçının işi genellikle _______ olarak tanımlanır.", "sıradan", "prozaik", "avangart", "gündelik", 3],
+            question7: ["'Sosyal' kelimesinin karşıtı nedir?", "rezervasyon", "dostça", "çıkış", "dostça", 1],
+            question8: ["Doğru belirli tanımlayıcıyı seçin: _______ komite üyesi yeni politikaya destek verdi.", "Çoğu", "Çok", "Birçok", "Hiçbir tanımlayıcı gerekli değil", 1],
+            question9: ["'Kavrayıcı' kelimesi ne anlama gelir?", "büyük anlayışa sahip olmak", "belirsiz", "anlamak için yavaş", "görememek", 1],
+            question10: ["Boşluğu doldurun: Onun argümanı ikna edici ve iyi-______", "düşündü", "düşündü", "düşünceli", "düşünce", 1]
+        },        
     },
 }
