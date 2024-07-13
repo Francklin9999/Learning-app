@@ -32,7 +32,7 @@ export default function Terms() {
 
             <section>
                 <h2>6. Contact Information</h2>
-                <p>If you have any questions about these terms and conditions, please contact us at contact@example.com.</p>
+                <p>If you have any questions about these terms and conditions, please contact us at franckfongang99@gmail.com.</p>
             </section>
         </div>
     );
