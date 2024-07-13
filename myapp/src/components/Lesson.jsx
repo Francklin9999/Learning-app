@@ -7,6 +7,8 @@ export default function Lesson(props) {
     const location = useLocation();
     const state = location.state;
 
+    const navigate = useNavigate();
+
     const level = state.level.toLowerCase();
     const language = state.language.toLowerCase();
     const questions = data.questions[`${language}`][`${level}`];
@@ -27,7 +29,7 @@ export default function Lesson(props) {
         setTimeout(() => {
             isCorrect ? setScore(score + 1) : setScore(score);
             if (nextIndex >= questions.length) {
-                navigate('/learn', { state: { score: score } });
+                navigate('/score', { state: { score: score } });
             }
             setCurrentQuestionIndex(nextIndex);
             setQuestion(questions[nextIndex][0]);
@@ -46,7 +48,7 @@ export default function Lesson(props) {
             <div className="lesson-form-container">
                 <div className="lesson-logo-container">{question}</div>
                 <form className="lesson-form" onSubmit={(e) => e.preventDefault()}>
-                <p className="lesson-question-count">Question: {currentQuestionIndex}/{questions.length}</p>
+                <p className="lesson-question-count">Question: {currentQuestionIndex + 1}/{questions.length}</p>
                     {questions[currentQuestionIndex].slice(1, 5).map((choice, index) => (
                         <button
                             key={index}

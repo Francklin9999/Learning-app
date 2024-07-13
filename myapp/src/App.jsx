@@ -3,6 +3,7 @@ import Lesson from './components/Lesson';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Learn from './components/Learn';
+import Score from './components/Score';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import PasswordReset from './components/PasswordReset';
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/learn" element={<Learn />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/score" element={<Score />} />
           <Route path="/" element={<Home />} />
           <Route path="/*" element={<ErrorPage />} />
 
