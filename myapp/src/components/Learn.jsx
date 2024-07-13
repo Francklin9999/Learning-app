@@ -1,8 +1,8 @@
 import {title, language} from '../const';
 import { useState } from 'react';
-import Sidebar from './Sidebar';
-import '../styles/Learn.css';
+import Lesson from './Lesson';
 import { useNavigate } from 'react-router-dom';
+import '../styles/Learn.css';
 
 
 export default function Learn() {
@@ -39,20 +39,14 @@ export default function Learn() {
         if(selectedLevel == null || selectedLanguage == null) {
             alert('Please select a level and language');
         } else {
-            navigate('/lesson', { 
-                state: { 
-                    level : selectedLevel,
-                    language : selectedLanguage,
-                }
+            navigate('/lesson', {
+                state: { level: selectedLevel, language: selectedLanguage }
             });
         }
     }
     
     return (
-        <>
-
-            <Sidebar/>
-            
+        <>  
             <header className="learn-header">
                     <h1>{title}</h1>
             </header>

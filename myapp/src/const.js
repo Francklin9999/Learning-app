@@ -18,54 +18,54 @@ export const questions = {
     },
 
     spanish : {
-        basic: {
-            question1: ["¿Cuál es el plural de 'perro'?", "perros", "perritos", "perras", "perro's", 1],
-            question2: ["¿Cuál de los siguientes es una fruta?", "Zanahoria", "Patata", "Manzana", "Brócoli", 3],
-            question3: ["Elige el tiempo pasado correcto de 'correr':", "corría", "corrió", "corriendo", "corre", 2],
-            question4: ["¿Cuál es el opuesto de 'caliente'?", "frío", "tibio", "calor", "caliente", 1],
-            question5: ["¿Cuál palabra es un sustantivo?", "rápidamente", "felicidad", "hermoso", "correr", 2],
-            question6: ["Completa la frase: Ella _______ un libro.", "lee", "leyendo", "leyó", "lee", 1],
-            question7: ["¿De qué color es el cielo en un día claro?", "azul", "verde", "rojo", "amarillo", 1],
-            question8: ["¿Cuál de estos es un mamífero?", "Serpiente", "Rana", "Ballena", "Pez", 3],
-            question9: ["¿Cuál es la primera letra del alfabeto?", "Z", "B", "C", "A", 4],
-            question10: ["¿Cuánto es 2 + 2?", "3", "4", "5", "6", 2]
-        },
-        medium: {
-            question1: ["Elige la forma correcta: Él _______ a la escuela todos los días.", "va", "fue", "iba", "irá", 1],
-            question2: ["¿Cuál es el participio pasado de 'ver'?", "visto", "vió", "viendo", "ver", 1],
-            question3: ["¿Cuál palabra es un adjetivo?", "rápido", "feliz", "correr", "hermoso", 2],
-            question4: ["Completa: Nosotros _______ al cine anoche.", "vamos", "fuimos", "ir", "fueron", 2],
-            question5: ["¿Cuál es un sinónimo de 'alegre'?", "triste", "feliz", "irritado", "cansado", 2],
-            question6: ["¿Cuál es el comparativo de 'bueno'?", "mejor", "bueno", "más bueno", "buen demasiado", 1],
-            question7: ["¿Cuál palabra es un verbo?", "rápido", "feliz", "nadar", "hermoso", 3],
-            question8: ["Elige el artículo correcto: _____ manzana es roja.", "Un", "El", "Una", "La", 3],
-            question9: ["Completa: Ella está _______ desde hace dos horas.", "estudiando", "estudiar", "estudiado", "estudio", 1],
-            question10: ["¿Cuál es el superlativo de 'pequeño'?", "menor", "más pequeño", "el menor", "menos pequeño", 3]
-        },
-        advanced: {
-            question1: ["¿Cuál de estos es un verbo irregular?", "hablar", "caminar", "ir", "jugar", 3],
-            question2: ["Completa: Si yo _______ rico, viajaría por el mundo.", "fuera", "era", "sería", "fuese", 1],
-            question3: ["¿Qué significa la expresión 'romper el hielo'?", "Hacer reír a alguien", "Comenzar una conversación en un ambiente social", "Terminar una relación", "Romper el hielo", 2],
-            question4: ["Elige la frase correcta:", "Ella no gusta de manzanas.", "Ella no gustó de manzanas.", "A ella no le gusta de manzanas.", "Ella no le gustan las manzanas.", 4],
-            question5: ["¿Cuál es el antónimo de 'fácil'?", "difícil", "simple", "liviano", "duro", 1],
-            question6: ["Completa: Aunque _______ tarde, llegó a tiempo.", "salió", "saliendo", "salir", "haber salido", 1],
-            question7: ["¿Cuál es el gerundio de 'comer'?", "comiendo", "comido", "comerá", "come", 1],
-            question8: ["¿Cuál frase está en voz pasiva?", "El chef cocinó la comida.", "La comida fue cocinada por el chef.", "El chef está cocinando la comida.", "El chef cocinará la comida.", 2],
-            question9: ["Elige la forma correcta: Ella _______ la película antes.", "vio", "ve", "viendo", "verá", 1],
-            question10: ["¿Qué significa 'omnipresente'?", "raro", "presente en todas partes", "desconocido", "limitado", 2]
-        },
-        native: {
-            question1: ["¿Cuál palabra es sinónimo de 'efímero'?", "eterno", "pasajero", "importante", "sustancial", 2],
-            question2: ["Completa: El CEO era conocido por su estilo de liderazgo _______.", "autocrático", "autócrata", "auto-crítico", "auto-crátula", 1],
-            question3: ["¿Qué significa la expresión 'estar a la vanguardia'?", "anticuado", "avanzado e innovador", "aburrido y desactualizado", "fundamental y básico", 2],
-            question4: ["Elige la frase correcta:", "Los datos fueron cuidadosamente analizados por los científicos.", "Los datos era cuidadosamente analizados por los científicos.", "Los datos era cuidadosamente analizado por los científicos.", "Los datos serán cuidadosamente analizados por los científicos.", 1],
-            question5: ["¿Qué significa 'yuxtaposición'?", "separación", "contraste", "combinación", "aislamiento", 2],
-            question6: ["Completa: El trabajo del artista a menudo se describe como _______.", "banal", "prosaico", "vanguardista", "ordinario", 3],
-            question7: ["¿Cuál palabra es un antónimo de 'sociable'?", "reservado", "amigable", "extrovertido", "simpático", 1],
-            question8: ["Elige la forma correcta: _______ de los miembros del comité estaban a favor de la nueva política.", "La mayoría", "Muchos", "Varios", "Pocos", 1],
-            question9: ["¿Qué significa 'perspicaz'?", "tener gran discernimiento", "falta de claridad", "lento para entender", "incapaz de ver", 1],
-            question10: ["Completa: Su argumento era convincente y bien _______.", "articulado", "articulada", "articulativo", "articulando", 1]
-        },
+        basic: [
+            ["¿Cuál es el plural de 'perro'?", "perros", "perritos", "perras", "perro's", 1],
+            ["¿Cuál de los siguientes es una fruta?", "Zanahoria", "Patata", "Manzana", "Brócoli", 3],
+            ["Elige el tiempo pasado correcto de 'correr':", "corría", "corrió", "corriendo", "corre", 2],
+            ["¿Cuál es el opuesto de 'caliente'?", "frío", "tibio", "calor", "caliente", 1],
+            ["¿Cuál palabra es un sustantivo?", "rápidamente", "felicidad", "hermoso", "correr", 2],
+            ["Completa la frase: Ella _______ un libro.", "lee", "leyendo", "leyó", "lee", 1],
+            ["¿De qué color es el cielo en un día claro?", "azul", "verde", "rojo", "amarillo", 1],
+            ["¿Cuál de estos es un mamífero?", "Serpiente", "Rana", "Ballena", "Pez", 3],
+            ["¿Cuál es la primera letra del alfabeto?", "Z", "B", "C", "A", 4],
+            ["¿Cuánto es 2 + 2?", "3", "4", "5", "6", 2],
+        ],
+        medium: [
+            ["Elige la forma correcta: Él _______ a la escuela todos los días.", "va", "fue", "iba", "irá", 1],
+            ["¿Cuál es el participio pasado de 'ver'?", "visto", "vió", "viendo", "ver", 1],
+            ["¿Cuál palabra es un adjetivo?", "rápido", "feliz", "correr", "hermoso", 2],
+            ["Completa: Nosotros _______ al cine anoche.", "vamos", "fuimos", "ir", "fueron", 2],
+            ["¿Cuál es un sinónimo de 'alegre'?", "triste", "feliz", "irritado", "cansado", 2],
+            ["¿Cuál es el comparativo de 'bueno'?", "mejor", "bueno", "más bueno", "buen demasiado", 1],
+            ["¿Cuál palabra es un verbo?", "rápido", "feliz", "nadar", "hermoso", 3],
+            ["Elige el artículo correcto: _____ manzana es roja.", "Un", "El", "Una", "La", 3],
+            ["Completa: Ella está _______ desde hace dos horas.", "estudiando", "estudiar", "estudiado", "estudio", 1],
+            ["¿Cuál es el superlativo de 'pequeño'?", "menor", "más pequeño", "el menor", "menos pequeño", 3]
+        ],
+        advanced: [
+            ["¿Cuál de estos es un verbo irregular?", "hablar", "caminar", "ir", "jugar", 3],
+            ["Completa: Si yo _______ rico, viajaría por el mundo.", "fuera", "era", "sería", "fuese", 1],
+            ["¿Qué significa la expresión 'romper el hielo'?", "Hacer reír a alguien", "Comenzar una conversación en un ambiente social", "Terminar una relación", "Romper el hielo", 2],
+            ["Elige la frase correcta:", "Ella no gusta de manzanas.", "Ella no gustó de manzanas.", "A ella no le gusta de manzanas.", "Ella no le gustan las manzanas.", 4],
+            ["¿Cuál es el antónimo de 'fácil'?", "difícil", "simple", "liviano", "duro", 1],
+            ["Completa: Aunque _______ tarde, llegó a tiempo.", "salió", "saliendo", "salir", "haber salido", 1],
+            ["¿Cuál es el gerundio de 'comer'?", "comiendo", "comido", "comerá", "come", 1],
+            ["¿Cuál frase está en voz pasiva?", "El chef cocinó la comida.", "La comida fue cocinada por el chef.", "El chef está cocinando la comida.", "El chef cocinará la comida.", 2],
+            ["Elige la forma correcta: Ella _______ la película antes.", "vio", "ve", "viendo", "verá", 1],
+            ["¿Qué significa 'omnipresente'?", "raro", "presente en todas partes", "desconocido", "limitado", 2]
+        ],
+        native: [
+            ["¿Cuál palabra es sinónimo de 'efímero'?", "eterno", "pasajero", "importante", "sustancial", 2],
+            ["Completa: El CEO era conocido por su estilo de liderazgo _______.", "autocrático", "autócrata", "auto-crítico", "auto-crátula", 1],
+            ["¿Qué significa la expresión 'estar a la vanguardia'?", "anticuado", "avanzado e innovador", "aburrido y desactualizado", "fundamental y básico", 2],
+            ["Elige la frase correcta:", "Los datos fueron cuidadosamente analizados por los científicos.", "Los datos era cuidadosamente analizados por los científicos.", "Los datos era cuidadosamente analizado por los científicos.", "Los datos serán cuidadosamente analizados por los científicos.", 1],
+            ["¿Qué significa 'yuxtaposición'?", "separación", "contraste", "combinación", "aislamiento", 2],
+            ["Completa: El trabajo del artista a menudo se describe como _______.", "banal", "prosaico", "vanguardista", "ordinario", 3],
+            ["¿Cuál palabra es un antónimo de 'sociable'?", "reservado", "amigable", "extrovertido", "simpático", 1],
+            ["Elige la forma correcta: _______ de los miembros del comité estaban a favor de la nueva política.", "La mayoría", "Muchos", "Varios", "Pocos", 1],
+            ["¿Qué significa 'perspicaz'?", "tener gran discernimiento", "falta de claridad", "lento para entender", "incapaz de ver", 1],
+            ["Completa: Su argumento era convincente y bien _______.", "articulado", "articulada", "articulativo", "articulando", 1]
+        ],
     },
 
     english : {
