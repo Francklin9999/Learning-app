@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Sidebar from './Sidebar';
 import '../styles/Login.css';
 
 
@@ -25,12 +24,11 @@ export default function Login() {
 
     return (
         <>
-        <Sidebar />
         <div className="login-main-content">
             <form className="login-form_container" onSubmit={handleSubmit}>
                     <div className="login-title_container">
-                        <p className="login-title">Login to your Account</p>
-                        <span className="login-subtitle">Log into to gain full access.</span>
+                        <p className="login-title">Log in to your Account</p>
+                        <span className="login-subtitle">Log in to your account to gain full access.</span>
                     </div>
                     <div className="login-input_container">
                         <label className="login-input_label" for="email_field">Email</label>
@@ -50,7 +48,7 @@ export default function Login() {
                         <input placeholder="Password" title="Input title" name="input-name" type="password" className="login-input_field" id="password_field" onChange={(e) => setPassword(e.target.value)}/>
                     </div>
                     <button title="Sign In" type="submit" className="login-sign-in_btn">
-                        <span>Sign In</span>
+                        <span>Log in</span>
                     </button>
                     <button title="Sign In" type="submit" className="login-sign-in_ggl">
                         <svg height="18" width="18" viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
@@ -64,7 +62,7 @@ export default function Login() {
                             <path fill="#4285f4" clip-path="url(#B)" d="M48 48L17 24l-4-3 35-10z"></path>
                         </g>
                         </svg>
-                        <span>Sign In with Google</span>
+                        <span>Log in with Google</span>
                     </button>
 
                     <div className="login-separator">
