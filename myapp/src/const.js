@@ -186,17 +186,53 @@ export const questions = {
     },
 
     portuguese : {
-        basic : {
-
+        basic: {
+            question1: ["Qual é o plural de 'cão'?", "cães", "cãos", "cões", "cães'", 1],
+            question2: ["Qual dessas é uma fruta?", "Cenoura", "Batata", "Maçã", "Brócolis", 3],
+            question3: ["Escolha o passado do verbo 'correr':", "correu", "corri", "correu", "corrido", 2],
+            question4: ["Qual é o oposto de 'quente'?", "frio", "morno", "fresco", "calor", 1],
+            question5: ["Qual palavra é um substantivo?", "rapidamente", "felicidade", "bonito", "correr", 2],
+            question6: ["Complete: Ela _______ um livro.", "lê", "ler", "leu", "lendo", 1],
+            question7: ["Qual é a cor do céu em um dia claro?", "azul", "verde", "vermelho", "amarelo", 1],
+            question8: ["Qual destes é um mamífero?", "Cobra", "Sapo", "Baleia", "Peixe", 3],
+            question9: ["Qual é a primeira letra do alfabeto?", "Z", "B", "C", "A", 4],
+            question10: ["Quanto é 2 + 2?", "3", "4", "5", "6", 2]
         },
-        medium : {
-
+        medium: {
+            question1: ["Escolha a forma correta: Ele __________ para a escola todos os dias.", "vai", "vou", "vão", "indo", 1],
+            question2: ["Qual é o particípio passado de 'ver'?", "visto", "viu", "vendo", "ver", 1],
+            question3: ["Qual palavra é um adjetivo?", "rápido", "feliz", "correr", "bonito", 2],
+            question4: ["Complete: Nós _______ ao cinema ontem à noite.", "vamos", "fomos", "indo", "ir", 2],
+            question5: ["Qual é um sinônimo de 'alegre'?", "triste", "feliz", "irritado", "cansado", 2],
+            question6: ["Qual é o comparativo de 'bom'?", "melhor", "bom", "mais bom", "bom demais", 1],
+            question7: ["Qual palavra é um verbo?", "rápido", "feliz", "nadar", "bonito", 3],
+            question8: ["Escolha o artigo correto: _____ maçã é vermelha.", "Um", "O", "Uma", "A", 3],
+            question9: ["Complete: Ela está _______ há duas horas.", "estudando", "estudar", "estudado", "estudo", 1],
+            question10: ["Qual é o superlativo de 'pequeno'?", "menor", "mais pequeno", "o menor", "menos pequeno", 3]
         },
-        advanced : {
-
+        advanced: {
+            question1: ["Qual dos seguintes é um verbo irregular?", "falar", "andar", "ir", "brincar", 3],
+            question2: ["Complete: Se eu _______ rico, viajaria pelo mundo.", "fosse", "era", "ser", "seja", 1],
+            question3: ["O que significa a expressão 'quebrar o gelo'?", "Romper o gelo", "Fazer alguém rir", "Começar uma conversa em um ambiente social", "Terminar um relacionamento", 3],
+            question4: ["Escolha a frase correta:", "Ela não gosta de maçãs.", "Ela não gosto de maçãs.", "Ela não gostou de maçãs.", "Ela não gosta das maçãs.", 1],
+            question5: ["Qual é o antônimo de 'fácil'?", "difícil", "simples", "leve", "duro", 1],
+            question6: ["Complete: Apesar de _______ tarde, ele chegou na hora.", "sair", "saído", "sair tarde", "ter saído", 4],
+            question7: ["Qual é o gerúndio de 'comer'?", "comendo", "comido", "comerá", "come", 1],
+            question8: ["Qual frase está na voz passiva?", "O chef cozinhou a refeição.", "A refeição foi cozinhada pelo chef.", "O chef está cozinhando a refeição.", "O chef cozinhará a refeição.", 2],
+            question9: ["Escolha a forma correta: Ela _______ o filme antes.", "viu", "vê", "vendo", "verá", 1],
+            question10: ["O que significa 'onipresente'?", "raro", "presente em todos os lugares", "desconhecido", "limitado", 2]
         },
-        native : {
-
+        native: {
+            question1: ["Qual palavra é sinônimo de 'efêmero'?", "eterno", "passageiro", "importante", "substancial", 2],
+            question2: ["Complete: O CEO era conhecido por seu estilo de liderança ______.", "autocrático", "autocrata", "auto-crítico", "auto-crate", 1],
+            question3: ["O que significa a expressão 'estar na vanguarda'?", "ultrapassado", "avançado e inovador", "sem graça e antiquado", "fundamental e básico", 2],
+            question4: ["Escolha a frase correta:", "Os dados foram cuidadosamente analisados pelos cientistas.", "Os dados era cuidadosamente analisados pelos cientistas.", "Os dados era cuidadosamente analisado pelos cientistas.", "Os dados serão cuidadosamente analisados pelos cientistas.", 1],
+            question5: ["O que significa 'justaposição'?", "separação", "contraste", "combinação", "isolamento", 2],
+            question6: ["Complete: O trabalho do artista é frequentemente descrito como ______.", "banal", "prosaico", "vanguardista", "ordinário", 3],
+            question7: ["Qual palavra é um antônimo de 'sociável'?", "reservado", "amigável", "extrovertido", "simpático", 1],
+            question8: ["Escolha a forma correta: _______ dos membros do comitê eram a favor da nova política.", "A maioria", "Muitos", "Vários", "Poucos", 1],
+            question9: ["O que significa 'perspicaz'?", "ter grande discernimento", "falta de clareza", "lento para entender", "incapaz de ver", 1],
+            question10: ["Complete: Seu argumento era convincente e bem ______.", "articulado", "articulada", "articulativo", "articulando", 1]
         },
     },
     
