@@ -135,17 +135,53 @@ export const questions = {
     },
 
     dutch : {
-        basic : {
-
+        basic: {
+            question1: ["Wat is het meervoud van 'kat'?", "katten", "kattes", "katjes", "kat's", 1],
+            question2: ["Welke van de volgende is een fruit?", "Wortel", "Aardappel", "Appel", "Broccoli", 3],
+            question3: ["Kies de juiste verleden tijd van 'lopen':", "loopte", "liep", "loopten", "gelopen", 2],
+            question4: ["Wat is het tegenovergestelde van 'heet'?", "koud", "warm", "koel", "warmte", 1],
+            question5: ["Welk woord is een zelfstandig naamwoord?", "snel", "geluk", "mooi", "lopen", 2],
+            question6: ["Vul in: Zij _______ een boek.", "leest", "lezen", "leest", "gelezen", 1],
+            question7: ["Welke kleur heeft de lucht op een heldere dag?", "blauw", "groen", "rood", "geel", 1],
+            question8: ["Welke van deze is een zoogdier?", "Slang", "Kikker", "Walvis", "Vis", 3],
+            question9: ["Wat is de eerste letter van het alfabet?", "Z", "B", "C", "A", 4],
+            question10: ["Wat is 2 + 2?", "3", "4", "5", "6", 2]
         },
-        medium : {
-
+        medium: {
+            question1: ["Kies de juiste vorm: Hij __________ naar school elke dag.", "gaat", "ga", "gaan", "gegaan", 1],
+            question2: ["Wat is het voltooid deelwoord van 'eten'?", "eet", "at", "gegeten", "eten", 3],
+            question3: ["Welk woord is een bijvoeglijk naamwoord?", "snel", "mooi", "lopen", "geluk", 2],
+            question4: ["Vul in: Ze _______ naar het concert gisteravond.", "gaat", "ging", "gegaan", "gaan", 2],
+            question5: ["Wat is een synoniem voor 'blij'?", "verdrietig", "gelukkig", "boos", "moe", 2],
+            question6: ["Wat is de vergrotende trap van 'groot'?", "groter", "grootste", "meer groot", "grote", 1],
+            question7: ["Welk woord is een werkwoord?", "snel", "gelukkig", "zwemmen", "mooi", 3],
+            question8: ["Kies het juiste lidwoord: ______ appel per dag houdt de dokter weg.", "Een", "De", "Het", "Geen lidwoord nodig", 1],
+            question9: ["Vul in: Zij is _______ voor twee uur.", "studeren", "studeert", "gestudeerd", "studie", 2],
+            question10: ["Wat is de overtreffende trap van 'snel'?", "sneller", "snelst", "meer snel", "meest snel", 2]
         },
-        advanced : {
-
+        advanced: {
+            question1: ["Welke van de volgende is een onregelmatig werkwoord?", "praten", "lopen", "gaan", "spelen", 3],
+            question2: ["Vul in: Als ik _______ rijk was, zou ik de wereld rondreizen.", "ben", "was", "waren", "zijn", 2],
+            question3: ["Wat betekent de uitdrukking 'het ijs breken'?", "IJs breken", "Iemand laten lachen", "Een gesprek beginnen in een sociale setting", "Een relatie beëindigen", 3],
+            question4: ["Kies de juiste zin:", "Ze houd niet van appels.", "Ze houdt niet van appels.", "Ze houdt niet appels.", "Ze houd van niet appels.", 2],
+            question5: ["Wat is het antoniem van 'complex'?", "eenvoudig", "moeilijk", "gemakkelijk", "zwaar", 1],
+            question6: ["Vul in: Ondanks _______ laat, kwam hij op tijd aan.", "verlaten", "verlaten hebben", "vertrekken", "verlatend", 1],
+            question7: ["Wat is het gerundium van 'zwemmen'?", "zwommen", "gezwommen", "zwemt", "zwemmend", 4],
+            question8: ["Welke zin is in de passieve vorm?", "De chef kookte de maaltijd.", "De maaltijd werd gekookt door de chef.", "De chef is de maaltijd aan het koken.", "De chef zal de maaltijd koken.", 2],
+            question9: ["Kies de juiste vorm: Zij _______ de film eerder.", "ziet", "zag", "heeft gezien", "zien", 3],
+            question10: ["Wat betekent 'alomtegenwoordig'?", "zeldzaam", "overal aanwezig", "onbekend", "beperkt", 2]
         },
-        native : {
-
+        native: {
+            question1: ["Welk woord is een synoniem voor 'kortstondig'?", "eeuwig", "tijdelijk", "belangrijk", "substantieel", 2],
+            question2: ["Vul in: De CEO stond bekend om zijn _______ leiderschapsstijl.", "autocratisch", "auto-kratisch", "autocraat", "autocritisch", 1],
+            question3: ["Wat betekent de uitdrukking 'vooroplopend'?", "achterhaald", "geavanceerd en innovatief", "saai en verouderd", "fundamenteel en basaal", 2],
+            question4: ["Kies de juiste zin:", "De gegevens werden zorgvuldig geanalyseerd door de wetenschappers.", "De data was zorgvuldig geanalyseerd door de wetenschappers.", "De data waren zorgvuldig geanalyseerd door de wetenschappers.", "De gegevens zijn zorgvuldig geanalyseerd door de wetenschappers.", 1],
+            question5: ["Wat betekent 'juxtapositie'?", "scheiding", "contrast", "combinatie", "isolatie", 2],
+            question6: ["Vul in: Het werk van de kunstenaar wordt vaak beschreven als ______.", "banaal", "prozaïsch", "avant-garde", "alledaags", 3],
+            question7: ["Welk woord is een antoniem van 'sociaal'?", "reserveren", "vriendelijk", "uitgaand", "vriendelijk", 1],
+            question8: ["Kies de juiste vorm: _______ van de commissieleden waren voor het nieuwe beleid.", "De meeste", "Veel", "Velen", "Enige", 1],
+            question9: ["Wat betekent 'scherpzinnig'?", "veel inzicht hebben", "onduidelijk", "traag van begrip", "niet in staat om te zien", 1],
+            question10: ["Vul in: Zijn argument was overtuigend en goed-_______", "articuleren", "gearticuleerd", "articulatief", "articulerend", 2]
         },
     },
 
