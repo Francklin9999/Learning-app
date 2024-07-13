@@ -1,14 +1,15 @@
-import './App.css';
 import Home from './components/Home';
 import Lesson from './components/Lesson';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Learn from './components/Learn';
+import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import PasswordReset from './components/PasswordReset';
 import ErrorPage from './components/ErrorPage';
 import Terms from './components/Terms';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
 
 export default function App() {
 
@@ -17,6 +18,8 @@ export default function App() {
       <Router>
 
         <div className="App">
+
+          <Sidebar />
         
         <Routes>
 
