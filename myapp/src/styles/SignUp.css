@@ -265,3 +265,11 @@
 .signup-returntomenu:focus {
   transform: scale(1.2);
 }
+
+#signup-password-match {
+  border-color: rgb(8, 212, 8);
+}
+
+#signup-password-nomatch {
+  border-color: red;
+}
