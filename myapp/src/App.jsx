@@ -20,7 +20,7 @@ export default function App() {
 
         <div className="App">
 
-          <Sidebar />
+        <Sidebar />
         
         <Routes>
 
