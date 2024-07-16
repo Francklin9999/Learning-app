@@ -1,6 +1,5 @@
 import {title, language} from '../const';
 import { useState } from 'react';
-import Lesson from './Lesson';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Learn.css';
 

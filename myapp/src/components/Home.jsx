@@ -1,6 +1,5 @@
 import { title } from '../const'
 import { useNavigate } from 'react-router-dom';
-import Footer from './Footer';
 import '../styles/Home.css';
 
 export default function Home() {
@@ -10,13 +9,13 @@ export default function Home() {
         navigate("/learn");
     }
 
-    const handleLogin = () => {
-        navigate("/login");
-    }
+    // const handleLogin = () => {
+    //     navigate("/login");
+    // }
 
-    const handleSignUp = () => {
-        navigate("/signup");
-    }
+    // const handleSignUp = () => {
+    //     navigate("/signup");
+    // }
 
     return (
         <div className="home">
@@ -35,13 +34,13 @@ export default function Home() {
                     <h1 className="home-main-title">Learn a variety of languages with {title} -- fast, easy and fun!</h1>
                 </div>
                 <div className="home-main-container-languages">
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/Capture.PNG"/><p>Ivory</p></button></div>
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/Capture5.PNG"/><p>Spanish</p></button></div>
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/Capture6.PNG"/><p>English</p></button></div>
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/Capture7.PNG"/><p>French</p></button></div>
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/Capture8.PNG"/><p>Dutch</p></button></div>
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/Capture9.PNG"/><p>Portuguese</p></button></div>
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/Capture10.PNG"/><p>Turk</p></button></div>
+                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/tagbana.PNG"/><p>Ivory</p></button></div>
+                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/spanish.PNG"/><p>Spanish</p></button></div>
+                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/england.png"/><p>English</p></button></div>
+                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/french.PNG"/><p>French</p></button></div>
+                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/dutch.PNG"/><p>Dutch</p></button></div>
+                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/portugal.PNG"/><p>Portuguese</p></button></div>
+                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/turk.PNG"/><p>Turk</p></button></div>
                 </div>
             </div>
                 <div className="home-second-container">

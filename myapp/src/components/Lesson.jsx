@@ -9,40 +9,40 @@ export default function Lesson(props) {
 
     const navigate = useNavigate();
 
-    const [isInitialized, setIsInitialized] = useState(false);
+    // const [isInitialized, setIsInitialized] = useState(false);
 
-    useEffect(() => {
-        const initialize = async () => {
-          await new Promise(resolve => setTimeout(resolve, 10000));
-          if (state == null) {
-            alert("Select a level and a language to continue");
-            navigate('/learn');
-          }
-          setIsInitialized(true);
-        };
-        initialize();
-      }, [state, navigate]);
+    // useEffect(() => {
+    //     const initialize = async () => {
+    //       await new Promise(resolve => setTimeout(resolve, 10000));
+    //       if (state == null) {
+    //         alert("Select a level and a language to continue");
+    //         navigate('/learn');
+    //       }
+    //       setIsInitialized(true);
+    //     };
+    //     initialize();
+    //   }, [state, navigate]);
 
-      if (!isInitialized) {
-        return (
-          <div className="lesson-loading">
-            <h2>Loading...</h2>
-            <div className="🤚">
-              <div className="👉"></div>
-              <div className="👉"></div>
-              <div className="👉"></div>
-              <div className="👉"></div>
-              <div className="🌴"></div>
-              <div className="👍"></div>
-            </div>
-          </div>
-        );
-      }
+    //   if (!isInitialized) {
+    //     return (
+    //       <div className="lesson-loading">
+    //         <h2>Loading...</h2>
+    //         <div className="🤚">
+    //           <div className="👉"></div>
+    //           <div className="👉"></div>
+    //           <div className="👉"></div>
+    //           <div className="👉"></div>
+    //           <div className="🌴"></div>
+    //           <div className="👍"></div>
+    //         </div>
+    //       </div>
+    //     );
+    //   }
 
     try {
-        const level = useMemo(() => state?.level.toLowerCase(), [state]);
-        const language = useMemo(() => (state?.language.toLowerCase() === "tagbana") ? "french" : state?.language.toLowerCase(), [state]);
-        const questions = useMemo(() => data.questions[`${language}`][`${level}`], [language, level]);
+        const level = state?.level.toLowerCase();
+        const language = (state?.language.toLowerCase() === "tagbana") ? "french" : state?.language.toLowerCase();
+        const questions = data.questions[`${language}`][`${level}`];
         
         const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
         const [question, setQuestion] = useState(questions[0][0]);
@@ -105,11 +105,10 @@ export default function Lesson(props) {
             </>
             
         )
-        } catch (e) {
+        } catch(e) {
             console.log(e);
-            alert('Please select a level and a language to continue.')
             useEffect(() => {
                 navigate('/learn');
-            })
+            }, []);
         }
 }

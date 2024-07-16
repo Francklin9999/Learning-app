@@ -145,7 +145,7 @@
 }
 
 .learn-roadmap-content button:hover {
-    background-color: #23c483;
+    background-color: var(--primary-color);
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #fff;
     transform: translateY(-7px);
@@ -200,7 +200,7 @@
   transition: all .2s;
   padding: 10px 20px;
   border-radius: 100px;
-  background: #cfef00;
+  background: var(--primary-color);
   border: 1px solid transparent;
   display: flex;
   align-items: center;
@@ -208,7 +208,7 @@
 }
 
 .learn-gotolesson button:hover {
-  background: #c4e201;
+  background: blueviolet;
 }
 
 .learn-gotolesson button > svg {
