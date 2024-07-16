@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import * as data from '../const';
 import '../styles/Lesson.css';
@@ -9,12 +9,37 @@ export default function Lesson(props) {
 
     const navigate = useNavigate();
 
-    const level = state.level.toLowerCase();
-    const language = state.language.toLowerCase();
-    const questions = data.questions[`${language}`][`${level}`];
+    const [isInitialized, setIsInitialized] = useState(false);
+
+    useEffect(() => {
+        const initialize = async () => {
+            await new Promise(resolve => setTimeout(resolve, 10000));
+            if (state == null) {
+                alert("Select a level and a language to continue.");
+                navigate('/learn');
+            }
+            setIsInitialized(true);
+        };
+        initialize();
+    }, []);
+
+    const [level, setLevel] = useState(null);
+    const [language, setLanguage] = useState(null);
+    const [questions, setQuestions] = useState(null);
+    const [question, setQuestion] = useState(null);
+
+    useEffect(() => {
+        if (state != null) {
+            setLevel(state.level.toLowerCase());
+            setLanguage((state.language.toLowerCase() == "tagbana") ? "french" : state.language.toLowerCase());
+            setQuestions( data.questions[`${language}`][`${level}`]);
+            setQuestions(questions[0][0]);
+        }
+    }, []);
+
+
     
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [question, setQuestion] = useState(questions[0][0]);
     const [isClicked, setIsClicked] = useState(false);
     const [currentSelection, setCurrentSelection] = useState(null);
     const [score, setScore] = useState(0);
@@ -24,7 +49,7 @@ export default function Lesson(props) {
         setCurrentSelection(index);
         const isCorrect = index === questions[currentQuestionIndex][5];
         setIsClicked(true);
-        const nextIndex = (currentQuestionIndex + 1);
+        const nextIndex = currentQuestionIndex + 1;
 
         setTimeout(() => {
             isCorrect ? setScore(score + 1) : setScore(score);
@@ -46,7 +71,23 @@ export default function Lesson(props) {
     useEffect(() => {
         const calculatedPercentage = ((score / currentQuestionIndex) * 100).toFixed(1);
         setPercentage(calculatedPercentage);
-    }, [currentQuestionIndex]);
+    }, [currentQuestionIndex, score]);
+
+    if (!isInitialized) {
+        return (
+        <div className="lesson-loading">
+            <h2>Loading...</h2>
+            <div class="🤚">
+                <div class="👉"></div>
+                <div class="👉"></div>
+                <div class="👉"></div>
+                <div class="👉"></div>
+                <div class="🌴"></div>		
+                <div class="👍"></div>
+            </div>
+        </div>
+        );
+    };
     
     return (
         <>

@@ -1,6 +1,5 @@
 import { title } from '../const'
 import { useNavigate } from 'react-router-dom';
-import Footer from './Footer';
 import '../styles/Home.css';
 
 export default function Home() {
@@ -10,13 +9,13 @@ export default function Home() {
         navigate("/learn");
     }
 
-    const handleLogin = () => {
-        navigate("/login");
-    }
+    // const handleLogin = () => {
+    //     navigate("/login");
+    // }
 
-    const handleSignUp = () => {
-        navigate("/signup");
-    }
+    // const handleSignUp = () => {
+    //     navigate("/signup");
+    // }
 
     return (
         <div className="home">
