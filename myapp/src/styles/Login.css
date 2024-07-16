@@ -1,19 +1,18 @@
 .login-main-content {
   width: 100%;
-  height: 90vh;
+  height: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 5%;
+  align-items: center;
 }
 
 .login-form_container {
-  width: 22%;
-  height: 85%;
+  margin: 6vh 0vw 6vh 0vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 1vh;
   padding: 4% 4% 4% 4%;
   background-color: #ffffff;
   box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
@@ -21,6 +20,7 @@
     0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
   border-radius: 11px;
   font-family: "Inter", sans-serif;
+  border: 1px solid #333;
 }
 
 .login-logo_container {
@@ -38,7 +38,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 1vh;
 }
 
 .login-title {
@@ -62,7 +62,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.2vh;
 }
 
 .login-icon {
@@ -74,6 +74,7 @@
 }
 
 .login-input_label {
+  text-align: start;
   font-size: 0.75rem;
   color: #8B8E98;
   font-weight: 600;
@@ -131,7 +132,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 50px;
   background: #212121;
   border-radius: 7px;
   outline: none;
@@ -140,6 +141,7 @@
   filter: drop-shadow(0px 1px 0px #efefef)
     drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
   cursor: pointer;
+  margin-bottom: 14px;
 }
 
 .login-separator {
@@ -163,4 +165,22 @@
   font-size: 0.75rem;
   color: #8B8E98;
   text-decoration: underline;
+}
+
+.login-returntomenu {
+  background-color: white;
+  border-radius: 12px;
+  position: absolute;
+  top: 5vh;
+  padding: 1rem;
+  left: 80vw;
+}
+
+.login-returntomenu a {
+  color: var(--primary-color);
+}
+
+.login-returntomenu:hover,
+.login-returntomenu:focus {
+  transform: scale(1.2);
 }

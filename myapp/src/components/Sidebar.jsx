@@ -3,38 +3,35 @@ import '../styles/Sidebar.css';
 
 export default function Sidebar(props) {
     const [sidebar, setSidebar] = useState(false);
-    const [content, setOptions] = useState('');
+    const [content, setContent] = useState('');
 
     const toggleSidebar = () => {
         setSidebar(!sidebar);
-        if (!sidebar) {
-            return options(false);
-        } else {
-            return setOptions('');
-        }
+        options(false);
     };
 
     const options = (isConnected) => {
         if (isConnected) {
             return (
-                setOptions(
-                <ul className="sidebar-options">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/Account">Account</a></li>
-                    <li><a href="/">Log out</a></li>
-                    <li><a href="/terms">Terms & Condition</a></li>
+                setContent(
+                <ul className="sidebar-content">
+                    <li className="sidebar-content-options"><a href="/">Home</a></li>
+                    <li className="sidebar-content-options"><a href="/Account">Account</a></li>
+                    <li className="sidebar-content-options"><a href="/">Log out</a></li>
+                    <li className="sidebar-content-options"><a href="/terms">Terms & Condition</a></li>
                 </ul>
                 )
             )
             
             } else {
                 return (
-                    setOptions(
-                    <ul className="sidebar-options">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">Login</a></li>
-                    <li><a href="/">Sign Up</a></li>
-                    <li><a href="/terms">Terms & Condition</a></li>
+                    setContent(
+                    <ul className="sidebar-content">
+                    <li className="sidebar-content-options"><a href="/">Home</a></li>
+                    <li className="sidebar-content-options"><a href="/learn">Learn</a></li>
+                    <li className="sidebar-content-options"><a href="/login">Login</a></li>
+                    <li className="sidebar-content-options"><a href="/signup">Sign Up</a></li>
+                    <li className="sidebar-content-options"><a href="/terms">Terms & Condition</a></li>
                     </ul>
                     )
                 )
@@ -43,14 +40,18 @@ export default function Sidebar(props) {
 
     return (
         <div>
-            <button className="sidebar-btn" onClick={toggleSidebar}>
-            </button>
-            <div>
-                <div className={`sidebar-sidebar ${sidebar ? 'sidebar-open' : 'sidebar-close'}`}>
-                <button className="sidebar-btn" onClick={toggleSidebar}>
+            <div className="sidebar-menuToggle">
+                <button onClick={toggleSidebar}>
+                <input id="sidebar-checkbox" type="checkbox" />
+                <label className="sidebar-toggle" htmlFor="checkbox">
+                    <div className="sidebar-bar sidebar-bar--top"></div>
+                    <div className="sidebar-bar sidebar-bar--middle"></div>
+                    <div className="sidebar-bar sidebar-bar--bottom"></div>
+                </label>
                 </button>
-                { content }
-                </div>
+            </div>
+            <div>
+                <div className={`${sidebar ? 'sidebar-sidebar-open' : 'sidebar-sidebar-closed'}`}>{content}</div>
             </div>
         </div>
     );

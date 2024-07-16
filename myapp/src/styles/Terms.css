@@ -1,0 +1,20 @@
+.terms-container {
+    padding: 20px;
+}
+
+.terms-container h2, 
+.terms-container p {
+    margin: 0;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.terms-container h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.terms-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}

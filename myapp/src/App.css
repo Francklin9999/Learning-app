@@ -1,16 +1,43 @@
+:root {
+  --primary-color : rgb(113, 81, 143);
+  --dark: #101315;
+  --light: #eeeeee;
+  --gradient: linear-gradient(10deg, #ffaa00, #ff6a00);
+  --gradient2: linear-gradient(15deg, #04ea00, #00d17d);
+  --gradient3: linear-gradient(15deg, #b648ff, #ef5dff);
+    font-size: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body, html {
     height: 100%;
     margin: 0;
   }
   
-  #root {
-    height: 100%;
-  }
-  
-  body {
-    background-image: url('../public/vectorstock_1999390.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+body {
+  position: relative;
+  background-image: url('background1.jpg'), url('background2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat, repeat-y;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
   
