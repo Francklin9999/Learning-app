@@ -1,0 +1,40 @@
+/* src/Emote.css */
+.emote {
+    width: 100px;
+    height: 100px;
+    background-color: #78c800;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .emote-face {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .emote-eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+  
+  .eye {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+  .emote-mouth {
+    width: 50%;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    margin-top: 10px;
+  }
+  

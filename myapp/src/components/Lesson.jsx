@@ -29,7 +29,13 @@ export default function Lesson(props) {
         setTimeout(() => {
             isCorrect ? setScore(score + 1) : setScore(score);
             if (nextIndex >= questions.length) {
-                navigate('/score', { state: { score: score } });
+                navigate('/score', { 
+                    state: { 
+                        score: score,
+                        level : level,
+                        language : language,
+                    } 
+                });
             }
             setCurrentQuestionIndex(nextIndex);
             setQuestion(questions[nextIndex][0]);
