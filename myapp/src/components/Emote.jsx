@@ -1,25 +1,25 @@
-// src/Emote.js
-import React from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Emote.css';
 
-const Emote = () => {
-  return (
-    <motion.div
-      className="emote"
-      initial={{ scale: 0.5, rotate: 0 }}
-      animate={{ scale: 1, rotate: 360 }}
-      transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
-    >
-      <div className="emote-face">
-        <div className="emote-eyes">
-          <div className="eye"></div>
-          <div className="eye"></div>
-        </div>
-        <div className="emote-mouth"></div>
-      </div>
-    </motion.div>
-  );
+export default function Emote(props) {
+    const state = (props.state == "happy") ? "happy" : "sad";
+
+    return (
+        <motion.div
+            className={`emote-${state}`}
+            initial={{ scale: 1, rotate: 30 }}
+            animate={{ scale: 1, rotate: 360 }}
+            transition={{ duration: 5, ease: "easeInOut", repeat: Infinity }}
+            >
+            <div className={`emote-face-${state}`}>
+                <div className={`emote-eyes-${state}`}>
+                <div className={`eye-${state}`}></div>
+                <div className={`eye-${state}`}></div>
+                </div>
+                <div className={`emote-mouth-${state}`}></div>
+            </div>
+        </motion.div>
+    );
 };
 
-export default Emote;
+
