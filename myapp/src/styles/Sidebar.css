@@ -22,7 +22,12 @@
   z-index: 1000;
 }
 
+.sidebar-menuToggle {
+    max-height: 20px;
+}
+
 .sidebar-menuToggle button {
+    height: 10px;
     position: fixed;
     margin-top: 1%;
     margin-left: 1%;
@@ -39,11 +44,17 @@
   
 .sidebar-toggle {
     position: relative;
-    width: 40px;
+    width: 25px;
     cursor: pointer;
     margin: auto;
     display: block;
-    height: calc(4px * 3 + 11px * 2);
+    height: 34px;
+}
+
+@media screen and (min-width: 768px) {
+    .sidebar-toggle{
+        width: 40px;
+    }
 }
   
 .sidebar-bar {

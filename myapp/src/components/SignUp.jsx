@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import * as data from '../const';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/SignUp.css';
 
 export default function SignUp() {
-    const navigate = useNavigate();
-
     const [firstName, setFirstName] = useState('');
     const [LastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [isMatching, setIsMatching] = useState(true);
+
+    const { handleHome, handleLearn, handleLogin, handleSignUp, handleTerms } = data.useNavigation();
 
     useEffect(() => {
         if (password !== confirmPassword) {
@@ -33,17 +34,7 @@ export default function SignUp() {
             email,
             password,
         };
-        navigate('/learn');
-    };
-
-    const handleSignup = () => {
-        if (password === confirmPassword) {
-            console.log('passwords match');
-            navigate('/learn');
-            } else {
-                console.log('passwords do not match');
-                alert('Password must match');
-            };
+        handleLearn;
     };
 
     return (
@@ -91,7 +82,7 @@ export default function SignUp() {
                         </svg>
                         <input required placeholder="Confirm Password" title="Input title" name="input-name" type="password" className="signup-input_field" id={isMatching ? ((confirmPassword === password) ? "#signup-password-match" : "") : "signup-password-nomatch"} autocomplete="new-password" onChange={(e) => setConfirmPassword(e.target.value)} onPaste={handlePaste} />
                     </div>
-                    <button title="Sign In" type="submit" className="signup-sign-in_btn" onClick={handleSignup}>
+                    <button title="Sign In" type="submit" className="signup-sign-in_btn" onClick={handleSignUp}>
                         <span>Sign up</span>
                     </button>
                     <button title="Sign In" type="submit" className="signup-sign-in_ggl">
@@ -109,11 +100,11 @@ export default function SignUp() {
                         <span>Sign up with Google</span>
                     </button>
                     <div>
-                        <p className="signup-signup-link">Already have an account?<a href="/login" className="signup-signup-link link"> Login here </a></p>
+                        <p className="signup-signup-link">Already have an account?<button onClick={handleLogin} className="signup-signup-link link"> Login here </button></p>
                     </div>
-                    <a href="/terms" className="signup-note">Terms of use &amp; Conditions</a>
+                    <button onClick={handleTerms} className="signup-note">Terms of use &amp; Conditions</button>
             </form>
-            <div className="signup-returntomenu"><a href="/">Return to home page</a></div>
+            <div className="signup-returntomenu"><button onClick={handleHome}>Return to home page</button></div>
         </div>
         </>
     );

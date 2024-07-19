@@ -1,5 +1,28 @@
+import { useNavigate } from 'react-router-dom';
+
 export const title = "Franck";
 export const language = "French";
+
+export const useNavigation = () => {
+    const navigate = useNavigate();
+  
+    const navigateTo = (location) => {
+      navigate(location);
+    };
+  
+    return {
+      navigateTo,
+      handleHome: () => navigate('/'),
+      handleLearn: () => navigate('/learn'),
+      handleLesson: () => navigate('lesson'),
+      handleLogin: () => navigate('/login'),
+      handleScore: () => navigate('/score'),
+      handleSignUp: () => navigate('/signup'),
+      handlePasswordReset: () => navigate('/PasswordReset'),
+      handleTerms: () => navigate('/terms'),
+      handleError: () => navigate('/*',)
+    };
+  };
 
 export const questions = {
     ivory : {

@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Footer.css';
 
 export default function Footer() {

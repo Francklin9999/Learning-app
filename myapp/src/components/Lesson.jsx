@@ -1,43 +1,16 @@
 import { useEffect, useState, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import * as data from '../const';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Lesson.css';
 
 export default function Lesson(props) {
     const location = useLocation();
     const state = location.state;
 
+    const { handleLearn } = data.useNavigation();
     const navigate = useNavigate();
 
-    // const [isInitialized, setIsInitialized] = useState(false);
-
-    // useEffect(() => {
-    //     const initialize = async () => {
-    //       await new Promise(resolve => setTimeout(resolve, 10000));
-    //       if (state == null) {
-    //         alert("Select a level and a language to continue");
-    //         navigate('/learn');
-    //       }
-    //       setIsInitialized(true);
-    //     };
-    //     initialize();
-    //   }, [state, navigate]);
-
-    //   if (!isInitialized) {
-    //     return (
-    //       <div className="lesson-loading">
-    //         <h2>Loading...</h2>
-    //         <div className="🤚">
-    //           <div className="👉"></div>
-    //           <div className="👉"></div>
-    //           <div className="👉"></div>
-    //           <div className="👉"></div>
-    //           <div className="🌴"></div>
-    //           <div className="👍"></div>
-    //         </div>
-    //       </div>
-    //     );
-    //   }
 
     try {
         const level = state?.level.toLowerCase();
@@ -80,9 +53,7 @@ export default function Lesson(props) {
         }, [currentQuestionIndex]);
         
         return (
-            <>
-            <div className="lesson-lesson">
-                <div className="lesson-form-container">
+                <div className="container lesson-form-container">
                     <div className="lesson-logo-container">{question}</div>
                     <form className="lesson-form" onSubmit={(e) => e.preventDefault()}>
                     <p className="lesson-question-count">Question: {currentQuestionIndex + 1}/{questions.length}</p>
@@ -101,14 +72,12 @@ export default function Lesson(props) {
                         <p className="lesson-question-count">Score: {score}/{currentQuestionIndex} | {percentage}%</p>
                     </form>
                 </div>
-            </div>
-            </>
             
         )
         } catch(e) {
             console.log(e);
             useEffect(() => {
-                navigate('/learn');
+                handleLearn;
             }, []);
         }
 }

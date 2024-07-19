@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Backdrop from './Backdrop';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Modal.css';
 
 export default function Modal({ handleClose, text }) {

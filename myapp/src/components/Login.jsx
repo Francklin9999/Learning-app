@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import * as data from '../const';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Login.css';
 
 
 export default function Login() {
-    const navigate = useNavigate();
+    const { handleHome, handleSignUp, handlePasswordReset, handleTerms } = data.useNavigation();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -16,11 +17,6 @@ export default function Login() {
             password,
         }
     }
-
-    const handleClick = () => {
-        navigate("/PasswordReset");
-    }
-
 
     return (
         <>
@@ -72,14 +68,14 @@ export default function Login() {
                     </div>
 
                     <div>
-                    <button title="Sign In" type="submit" className="login-sign-up" onClick={handleClick}>
+                    <button title="Sign In" type="submit" className="login-sign-up" onClick={handlePasswordReset}>
                         <span>Forgot Password</span>
                     </button>
-                        <p className="login-signup-link">Don't have an account?<a href="/SignUp" className="login-signup-link link"> Sign up now</a></p>
+                        <p className="login-signup-link">Don't have an account?<button onClick={handleSignUp} className="login-signup-link link"> Sign up now</button></p>
                     </div>
-                    <a href="/terms" className="login-note">Terms of use &amp; Conditions</a>
+                    <button onClick={handleTerms} className="login-note">Terms of use &amp; Conditions</button>
             </form>
-            <div className="login-returntomenu"><a href="/">Return to home page</a></div>
+            <div className="login-returntomenu"><button onClick={handleHome}>Return to home page</button></div>
         </div>
         </>
     );

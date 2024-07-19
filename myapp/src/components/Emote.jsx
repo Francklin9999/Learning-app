@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Emote.css';
 
 export default function Emote(props) {

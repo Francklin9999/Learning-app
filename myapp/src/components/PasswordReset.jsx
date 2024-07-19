@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Modal from './Modal';
+import * as data from '../const';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/PasswordReset.css';
 
 export default function PasswordReset() {
-    const navigate = useNavigate();
+    const { handleSignUp } = data.useNavigation();
 
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -23,7 +25,7 @@ export default function PasswordReset() {
 
     return (
             <>
-            <motion.button
+            {/* <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className="modal-save-button modal-button"
@@ -37,7 +39,7 @@ export default function PasswordReset() {
                     onExitComplete={() => null}
                     >
                         {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
-                </AnimatePresence>
+                </AnimatePresence> */}
             <div className="passwordreset-form-container">
             <div className="passwordreset-logo-container">Forgot Password</div>
 
@@ -50,7 +52,7 @@ export default function PasswordReset() {
                 <button className="passwordreset-form-submit-btn" type="submit">Send Email</button>
             </form>
 
-            <p className="passwordreset-signup-link">Don't have an account?<a href="/SignUp" className="passwordreset-signup-link link"> Sign up now</a></p>
+            <p className="passwordreset-signup-link">Don't have an account?<button onClick={handleSignUp} className="passwordreset-signup-link link"> Sign up now</button></p>
             </div>
         </>
     );

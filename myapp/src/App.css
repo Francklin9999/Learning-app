@@ -27,6 +27,10 @@ body {
   background-repeat: no-repeat, repeat-y;
 }
 
+a {
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
   min-height: 100vh;

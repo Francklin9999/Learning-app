@@ -1,18 +1,21 @@
 import { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Conffeti from 'react-confetti';
 import Emote from './Emote';
+import * as data from '../const';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Score.css';
 
 
 export default function Score() {
     const location = useLocation();
     const state = location.state;
+
+    const { handleHome, handleLearn } = data.useNavigation();
+    const navigate = useNavigate();
     
     const [content, setContent] = useState('');
     const [emotion, setEmotion] = useState('');
-
-    const navigate = useNavigate();
 
     const result = () => {
       if (state.score >=8 ) {
@@ -30,14 +33,6 @@ export default function Score() {
     useEffect(() => {
       result();
       }, []);
-
-    const handleLearn = () => {
-      navigate('/learn');
-    }
-
-    const handleMenu = () => {
-      navigate('/learn');
-    }
   
     const handleTryAgain = () => {
       navigate('/lesson', {
@@ -49,12 +44,9 @@ export default function Score() {
     }
 
     const handleNextLesson = () => {
-      if (level == "native") {
-
-      }
       navigate('/lesson', {
         state: {
-          level : ((level == "basic") ? "medium" : (level == "medium") ? "advanced" : "native"),
+          level : ((state.level == "basic") ? "medium" : (state.level == "medium") ? "advanced" : "native"),
           language : state.language,
           }
           });
@@ -75,7 +67,7 @@ export default function Score() {
             <button onClick={handleLearn}>Next Lesson</button>
             <button onClick={handleTryAgain}>Try again</button>
             <button onClick={handleNextLesson}>Next Level</button>
-            <button onClick={handleMenu}>Menu</button>
+            <button onClick={handleHome}>Menu</button>
           </div>
         </div>
       </div>

@@ -1,50 +1,41 @@
 import { title } from '../const'
-import { useNavigate } from 'react-router-dom';
+import * as data from '../const';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Home.css';
 
 export default function Home() {
-    const navigate = useNavigate();
-
-    const handleClick = () => {
-        navigate("/learn");
-    }
-
-    // const handleLogin = () => {
-    //     navigate("/login");
-    // }
-
-    // const handleSignUp = () => {
-    //     navigate("/signup");
-    // }
+    const { handleLearn, handleLogin, handleSignUp } = data.useNavigation();
 
     return (
         <div className="home">
-        <header className="home-header">
-            <h2 className="home-header-title">Franck</h2>
-            <h2 className="home-header-content">Learn a new language today!</h2>
-            <nav className="home-header-details">
-                <div className="home-header-details-login"><a href="/login">Log in</a></div>
-                <div className="home-header-details-signup"><a href="/login">Sign up</a></div>
-            </nav>
-        </header>
-
-        <main className="home-main">
-            <div className="home-main-container">
-                <div>
-                    <h1 className="home-main-title">Learn a variety of languages with {title} -- fast, easy and fun!</h1>
-                </div>
-                <div className="home-main-container-languages">
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/tagbana.PNG"/><p>Ivory</p></button></div>
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/spanish.PNG"/><p>Spanish</p></button></div>
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/england.png"/><p>English</p></button></div>
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/french.PNG"/><p>French</p></button></div>
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/dutch.PNG"/><p>Dutch</p></button></div>
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/portugal.PNG"/><p>Portuguese</p></button></div>
-                    <div><button onClick={handleClick} className="home-main-languages"><img src="../country-pics/turk.PNG"/><p>Turk</p></button></div>
+        <header className="container-fluid home-header">
+            <div className="row justify-content-center text-center">
+                <h2 className="col home-header-content">Franck</h2>
+                <h2 className="col home-header-content">Learn a new language today!</h2>
+                <div className="col home-header-details">
+                    <nav className="row home-header-nav">
+                        <a className="col home-header-details-login" href="/login">Log in</a>
+                        <a className="col home-header-details-signup" href="/login">SignUp</a>
+                    </nav>
                 </div>
             </div>
-                <div className="home-second-container">
-                    <div className="home-second-container-container">
+        </header>
+
+        <main className="container-fluid home-main">
+            <div className="container-fluid home-main-container">
+                <h1 className="row home-main-title">Learn a variety of languages with {title} -- fast, easy and fun!</h1>
+                <div className="row home-main-container-languages">
+                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/tagbana.PNG"/>Tagbana</button>
+                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/spanish.PNG"/>Spanish</button>
+                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/england.png"/>English</button>
+                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/french.PNG"/>French</button>
+                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/dutch.PNG"/>Dutch</button>
+                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/portugal.PNG"/>Portuguese</button>
+                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/turk.PNG"/>Turk</button>
+                </div>
+            </div>
+                <div className="container home-second-container">
+                    <div className="container home-second-container-container">
                         <h1 >Why learn a language?</h1>
                         <p>
                             Learning a new language can significantly benefit employees and the overall success of a company. At our company, we are constantly expanding and engaging with a diverse client base, making multilingual capabilities increasingly essential. Here are some key reasons why language learning is particularly advantageous in our context:
@@ -55,19 +46,19 @@ export default function Home() {
                             In conclusion, investing in language learning is not just an individual asset but a strategic business decision. It equips our company to communicate more effectively, explore new markets, and foster a culturally aware and inclusive workplace, ultimately driving our long-term success.
                         </p>
                     </div>
-                    <div className="home-second-title">
-                        <h1 className="home-second-title-content">So what are you waiting for? <br></br>
+                    <div className="container-fluid home-second-title">
+                        <h1 className="row home-second-title-content">So what are you waiting for? <br></br>
                         Start learning today!</h1>
-                        <div className="home-main-buttons">
-                            <a href="/login" className="home-button-button-account">
+                        <div className="row home-main-buttons">
+                            <button onClick={handleLogin} className="col-2 home-button-button-account">
                                 <p>Log In</p>
-                            </a>
-                            <a href="/learn" className="home-button-button-account">
+                            </button>
+                            <button onClick={handleLearn} className="col-4 home-button-button-account">
                                 <p>Continue without an account</p>
-                            </a>
-                            <a href="/SignUp" className="home-button-button-account">
+                            </button>
+                            <button onClick={handleSignUp} className="col-2 home-button-button-account">
                                 <p>Sign Up</p>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
