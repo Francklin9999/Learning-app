@@ -5,7 +5,7 @@ import '../styles/Login.css';
 
 
 export default function Login() {
-    const { handleHome, handleSignUp, handlePasswordReset, handleTerms } = data.useNavigation();
+    const { handleHome, handleLearn, handleSignUp, handlePasswordReset, handleTerms } = data.useNavigation();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -16,12 +16,13 @@ export default function Login() {
             email,
             password,
         }
+        handleLearn();
     }
 
     return (
         <>
         <div className="login-main-content">
-            <form className="login-form_container" onSubmit={handleSubmit}>
+            <form className="login-form_container" onSubmit={ () => handleSubmit() }>
                     <div className="login-title_container">
                         <p className="login-title">Log in to your Account</p>
                         <span className="login-subtitle">Log in to your account to gain full access.</span>
@@ -68,14 +69,14 @@ export default function Login() {
                     </div>
 
                     <div>
-                    <button title="Sign In" type="submit" className="login-sign-up" onClick={handlePasswordReset}>
+                    <button title="Sign In" type="submit" className="login-sign-up" onClick={ () => handlePasswordReset() }>
                         <span>Forgot Password</span>
                     </button>
-                        <p className="login-signup-link">Don't have an account?<button onClick={handleSignUp} className="login-signup-link link"> Sign up now</button></p>
+                        <p className="login-signup-link">Don't have an account?<button onClick={ () => handleSignUp() } className="login-signup-link link"> Sign up now</button></p>
                     </div>
-                    <button onClick={handleTerms} className="login-note">Terms of use &amp; Conditions</button>
+                    <button onClick={ () => handleTerms() } className="login-note">Terms of use &amp; Conditions</button>
             </form>
-            <div className="login-returntomenu"><button onClick={handleHome}>Return to home page</button></div>
+            <div className="login-returntomenu"><button onClick={ () => handleHome() }>Return to home page</button></div>
         </div>
         </>
     );

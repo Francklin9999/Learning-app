@@ -14,6 +14,10 @@ export default function Sidebar(props) {
         options(false);
     };
 
+    const close = () => {
+        setSidebar(false);
+    }
+
     const options = (isConnected) => {
         if (isConnected) {
             return (
@@ -22,7 +26,7 @@ export default function Sidebar(props) {
                     <li className="sidebar-content-options"><button onClick={data.handleHome}>Home</button></li>
                     <li className="sidebar-content-options"><a href="/Account">Account</a></li>
                     <li className="sidebar-content-options"><a href="/">Log out</a></li>
-                    <li className="sidebar-content-options"><button  onClick={handleTerms}>Terms & Condition</button></li>
+                    <li className="sidebar-content-options"><button  onClick={ handleTerms() }>Terms & Condition</button></li>
                 </ul>
                 )
             )
@@ -31,11 +35,11 @@ export default function Sidebar(props) {
                 return (
                     setContent(
                     <ul className="sidebar-content">
-                    <li className="sidebar-content-options"><button  onClick={handleHome}>Home</button></li>
-                    <li className="sidebar-content-options"><button  onClick={handleLearn}>Learn</button></li>
-                    <li className="sidebar-content-options"><button  onClick={handleLogin}>Login</button></li>
-                    <li className="sidebar-content-options"><button  onClick={handleSignUp}>Sign Up</button></li>
-                    <li className="sidebar-content-options"><button  onClick={handleTerms}>Terms & Condition</button></li>
+                    <li className="sidebar-content-options"><button  onClick={ () => { handleHome(); close(); } }>Home</button></li>
+                    <li className="sidebar-content-options"><button  onClick={ () => { handleLearn(); close(); } }>Learn</button></li>
+                    <li className="sidebar-content-options"><button  onClick={ () => { handleLogin(); close(); } }>Login</button></li>
+                    <li className="sidebar-content-options"><button  onClick={ () => { handleSignUp(); close(); } }>Sign Up</button></li>
+                    <li className="sidebar-content-options"><button  onClick={ () => { handleTerms(); close(); } }>Terms & Condition</button></li>
                     </ul>
                     )
                 )
@@ -45,7 +49,7 @@ export default function Sidebar(props) {
     return (
         <div>
             <div className="sidebar-menuToggle">
-                <button onClick={toggleSidebar}>
+                <button onClick={ () => toggleSidebar() }>
                 <input id="sidebar-checkbox" type="checkbox" />
                 <label className="container sidebar-toggle" htmlFor="checkbox">
                     <div className="sidebar-bar sidebar-bar--top"></div>

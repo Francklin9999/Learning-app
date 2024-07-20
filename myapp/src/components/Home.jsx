@@ -14,8 +14,8 @@ export default function Home() {
                 <h2 className="col home-header-content">Learn a new language today!</h2>
                 <div className="col home-header-details">
                     <nav className="row home-header-nav">
-                        <a className="col home-header-details-login" href="/login">Log in</a>
-                        <a className="col home-header-details-signup" href="/login">SignUp</a>
+                        <button onClick={ () => handleLogin() } className="col home-header-details-login">Log in</button>
+                        <button onClick={ ()=> handleSignUp() } className="col home-header-details-signup">SignUp</button>
                     </nav>
                 </div>
             </div>
@@ -25,13 +25,13 @@ export default function Home() {
             <div className="container-fluid home-main-container">
                 <h1 className="row home-main-title">Learn a variety of languages with {title} -- fast, easy and fun!</h1>
                 <div className="row home-main-container-languages">
-                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/tagbana.PNG"/>Tagbana</button>
-                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/spanish.PNG"/>Spanish</button>
-                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/england.png"/>English</button>
-                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/french.PNG"/>French</button>
-                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/dutch.PNG"/>Dutch</button>
-                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/portugal.PNG"/>Portuguese</button>
-                    <button onClick={handleLearn} className="home-main-languages"><img src="../country-pics/turk.PNG"/>Turk</button>
+                    <button onClick={ () => handleLearn({ language: "Tagbana" }) } className="home-main-languages"><img src="../country-pics/tagbana.PNG"/>Tagbana</button>
+                    <button onClick={ () => handleLearn({ language: "Spanish" }) } className="home-main-languages"><img src="../country-pics/spanish.PNG"/>Spanish</button>
+                    <button onClick={ () => handleLearn({ language: "English" }) } className="home-main-languages"><img src="../country-pics/england.png"/>English</button>
+                    <button onClick={ () => handleLearn({ language: "French" }) } className="home-main-languages"><img src="../country-pics/french.PNG"/>French</button>
+                    <button onClick={ () => handleLearn({ language: "Dutch" }) } className="home-main-languages"><img src="../country-pics/dutch.PNG"/>Dutch</button>
+                    <button onClick={ () => handleLearn({ language: "Portuguese" }) } className="home-main-languages"><img src="../country-pics/portugal.PNG"/>Portuguese</button>
+                    <button onClick={ () => handleLearn({ language: "Turk" }) } className="home-main-languages"><img src="../country-pics/turk.PNG"/>Turk</button>
                 </div>
             </div>
                 <div className="container home-second-container">
@@ -50,13 +50,13 @@ export default function Home() {
                         <h1 className="row home-second-title-content">So what are you waiting for? <br></br>
                         Start learning today!</h1>
                         <div className="row home-main-buttons">
-                            <button onClick={handleLogin} className="col-2 home-button-button-account">
+                            <button onClick={ () => handleLogin() } className="col-2 home-button-button-account">
                                 <p>Log In</p>
                             </button>
-                            <button onClick={handleLearn} className="col-4 home-button-button-account">
+                            <button onClick={ ()=> handleLearn() } className="col-4 home-button-button-account">
                                 <p>Continue without an account</p>
                             </button>
-                            <button onClick={handleSignUp} className="col-2 home-button-button-account">
+                            <button onClick={ () => handleSignUp() } className="col-2 home-button-button-account">
                                 <p>Sign Up</p>
                             </button>
                         </div>

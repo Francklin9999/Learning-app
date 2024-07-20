@@ -1,13 +1,15 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import * as data from '../const';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Learn.css';
 
 
 export default function Learn() {
+    const location = useLocation();
+    const state = location.state;
 
-    const navigate = useNavigate();
+    const { handleLesson } = data.useNavigation();
 
     const [isOpen, setIsOpen] = useState(false);
     const [selectedLevel, setSelectedLevel] = useState(null);
@@ -21,6 +23,12 @@ export default function Learn() {
         { title: 'Advanced', description: 'Become fluent' },
         { title: 'Native', description: 'Learn to speak like a native speaker' },
       ];
+
+    useEffect(() => {
+        if (state) {
+            setSelectedLanguage(state.language);
+    };
+    }, []);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -39,16 +47,18 @@ export default function Learn() {
         if(selectedLevel == null || selectedLanguage == null) {
             alert('Please select a level and language');
         } else {
-            navigate('/lesson', {
-                state: { level: selectedLevel, language: selectedLanguage }
-            });
-        }
+            handleLesson(
+                { 
+                    level: selectedLevel, 
+                    language: selectedLanguage, 
+                });
+        };
     }
     
     return (
         <>  
             <header className="container-fluid text-center learn-header">
-                    <h1>{data.title}</h1>
+                    <h1>Choose a language and a level</h1>
             </header>
 
             <main className="container learn-main">
@@ -72,7 +82,7 @@ export default function Learn() {
                         <div className="learn-dropdown">
                             <div className="learn-dropdown-options">
                             <h3>Select a Language:</h3>
-                            <button onClick={toggleDropdown} className="learn-dropdown-toggle">
+                            <button onClick={ () => toggleDropdown() } className="learn-dropdown-toggle">
                                 {selectedLanguage || 'Select'}
                             </button>
                             {isOpen && (

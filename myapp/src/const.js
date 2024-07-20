@@ -6,32 +6,50 @@ export const language = "French";
 export const useNavigation = () => {
     const navigate = useNavigate();
   
-    const navigateTo = (location) => {
+    const navigateTo = (location, state = {}) => {
       navigate(location);
     };
   
     return {
       navigateTo,
-      handleHome: () => navigate('/'),
-      handleLearn: () => navigate('/learn'),
-      handleLesson: () => navigate('lesson'),
-      handleLogin: () => navigate('/login'),
-      handleScore: () => navigate('/score'),
-      handleSignUp: () => navigate('/signup'),
-      handlePasswordReset: () => navigate('/PasswordReset'),
-      handleTerms: () => navigate('/terms'),
-      handleError: () => navigate('/*',)
+      handleHome: (state) => navigate('/', { state }),
+      handleLearn: (state) => navigate('/learn', { state }),
+      handleLesson: (state) => navigate('lesson', { state }),
+      handleLogin: (state) => navigate('/login', { state }),
+      handleScore: (state) => navigate('/score', { state }),
+      handleSignUp: (state) => navigate('/signup', { state }),
+      handlePasswordReset: (state) => navigate('/PasswordReset', { state }),
+      handleTerms: (state) => navigate('/terms', { state }),
+      handleError: (state) => navigate('/*', { state }),
     };
   };
 
 export const questions = {
     ivory : {
-        basic : {
-
-        },
-        medium : {
-
-        },
+        basic : [
+            ["Quel est le mot en tagbana pour 'ma mère' et sa forme plurielle ?", "Nan kpɔ", "Nan to", "Nan nukpɔ", "Nan nu", 4],
+            ["Comment dit-on 'ton père' en tagbana pour la deuxième personne du singulier ?", "Manwo", "Wowo", "Yewo", "Manwo ti", 1],
+            ["Quel est l'adjectif possessif en tagbana pour 'son/sa' ?", "nan", "man", "wo", "Wi, ki, li, mi", 4],
+            ["Quel est le pronom pour la première personne du pluriel en tagbana ?", "Man", "Wo", "Pe", "Wolo", 4],
+            ["Quel est le pronom anaphorique en tagbana pour 'ils/elles' lorsqu'il s'agit de liquides ?", "Ki", "Pe", "Li", "Ti", 4],
+            ["Traduisez la phrase 'Il a mangé' en utilisant le pronom anaphorique approprié en tagbana.", "Wi en-ɛnlen", "Ki je", "Wi ti wʊ", "Ke je", 3],
+            ["Comment utilise-t-on l'adjectif possessif en tagbana pour 'mon' dans une phrase ? Donnez un exemple.", "Mi li wʊ", "Nan kpɔ", "Nan pi-ili", "Man jiɛ-la", 3],
+            ["Quelle est la forme plurielle de 'mon enfant' en tagbana ?", "Nan kpɔ yele", "Nan pi-ili", "Nan jiɛ-la", "Nan piɔle", 4],
+            ["Quel est le terme en tagbana pour 'jeunesse, féminin' ?", "Picie-ɛrɛ", "Nanjie-ɛ", "Nan-jiɛ", "Picie-ɛ", 4],
+            ["Comment traduiriez-vous 'Les vêtements sont propres' en utilisant le pronom anaphorique correct ?", "Dre-e ki wʊ", "Dre-e ti wʊ", "Guo-olo pe li", "Kajɛn-ɛnlen ke je", 2]
+        ],
+        medium : [
+            ["Tagbana: Ki gniɛn-ɛn (Traduction: Ouvre-le !) Laquelle des phrases suivantes est un exemple d'utilisation correct ?", "Dre-e ki le", "Goyɛ-e ki gniɛn-ɛn", "Gbɔssio ki jie-e", "Nanto ki ya-a", 2],
+            ["Tagbana: Ki jre-ɛ (Traduction: Lève-le !) Laquelle des phrases suivantes est un exemple d'utilisation correct ?", "Kie ki jre-ɛ", "Goyɛ-e ki gniɛn-ɛn", "Drere ti kpe", "Acon-on ki te-ɛ", 1],
+            ["Tagbana: Ki le (Traduction: Porte-le !) Laquelle des phrases suivantes est un exemple d'utilisation correct ?", "Fɔɔ ki cie", "Dre-e ki le", "Hro ti flo wa", "Nanto ki ya-a", 2],
+            ["Tagbana: Ki fa (Traduction: Enlève-le !) Laquelle des phrases suivantes est un exemple d'utilisation correct ?", "Tan-an ki ta", "Kayɔ-o ki tanlan", "Drere ti kpe", "Dre-e ki fa", 4],
+            ["Tagbana: Ki ya-a (Traduction: Pardon, laisse tomber !) Laquelle des phrases suivantes est un exemple d'utilisation correct ?", "Nanto ki ya-a", "Fɔɔ ki cie", "Kayɔ-o ki tanlan", "Tan-an ki ta", 1],
+            ["Tagbana: Ki tanlan (Traduction: Raconte (l’histoire) !) Laquelle des phrases suivantes est un exemple d'utilisation correct ?", "Goyɛ-e ki gniɛn-ɛn", "Tan-an ki ta", "Kayɔ-o ki tanlan", "Nanto ki ya-a", 3],
+            ["Tagbana: Ki ton (Traduction: Ferme-le !) Laquelle des phrases suivantes est un exemple d'utilisation correct ?", "Kie ki jre-ɛ", "Acon-on ki te-ɛ", "Dre-e ki le", "Goyɛ-e ki gniɛn-ɛn", 2],
+            ["Tagbana: Ki cie (Traduction: Refuse, oppose-toi à ça) Laquelle des phrases suivantes est un exemple d'utilisation correct ?", "Tan-an ki ta", "Fɔɔ ki cie", "Nanto ki ya-a", "Hro ti flo wa", 2],
+            ["Tagbana: Ta sie man ya gniɛn (Traduction: Va ouvrir (là-bas)) Laquelle des phrases suivantes est un exemple d'utilisation correct ?", "Ta sie man-ɛn", "Ta sie man-ɛn fere", "Ta sie man-an’gniɛn", "Ta sie man-an’li", 3],
+            ["Tagbana: Ji ɔ (Traduction: Bois) Laquelle des phrases suivantes est un exemple d'utilisation correct ?", "Ta gnionon", "Ta jio", "Ta dun", "Ta wele", 2]
+        ],
         advanced : {
 
         },

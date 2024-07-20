@@ -34,13 +34,13 @@ export default function SignUp() {
             email,
             password,
         };
-        handleLearn;
+        handleLearn();
     };
 
     return (
         <>
         <div className="signup-main-content">
-            <form className="signup-form_container" onSubmit={handleSubmit}>
+            <form className="signup-form_container" onSubmit={ () => handleSubmit() }>
                     <div className="signup-title_container">
                         <p className="signup-title">Sign up now</p>
                         <span className="signup-subtitle">Sign up to gain full access.</span>
@@ -100,11 +100,11 @@ export default function SignUp() {
                         <span>Sign up with Google</span>
                     </button>
                     <div>
-                        <p className="signup-signup-link">Already have an account?<button onClick={handleLogin} className="signup-signup-link link"> Login here </button></p>
+                        <p className="signup-signup-link">Already have an account?<button onClick={ () => handleLogin() } className="signup-signup-link link"> Login here </button></p>
                     </div>
-                    <button onClick={handleTerms} className="signup-note">Terms of use &amp; Conditions</button>
+                    <button onClick={ () => handleTerms() } className="signup-note">Terms of use &amp; Conditions</button>
             </form>
-            <div className="signup-returntomenu"><button onClick={handleHome}>Return to home page</button></div>
+            <div className="signup-returntomenu"><button onClick={ () => handleHome() }>Return to home page</button></div>
         </div>
         </>
     );

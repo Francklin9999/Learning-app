@@ -1,18 +1,23 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import * as data from '../const';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Lesson.css';
 
 export default function Lesson(props) {
+    console.log(2);
     const location = useLocation();
     const state = location.state;
 
-    const { handleLearn } = data.useNavigation();
-    const navigate = useNavigate();
-
+    const { handleLearn, handleScore } = data.useNavigation();
 
     try {
+        useEffect(() => {
+            if (state == null) {
+                handleLearn();
+            };
+        }, []);
+
         const level = state?.level.toLowerCase();
         const language = (state?.language.toLowerCase() === "tagbana") ? "french" : state?.language.toLowerCase();
         const questions = data.questions[`${language}`][`${level}`];
@@ -33,13 +38,13 @@ export default function Lesson(props) {
             setTimeout(() => {
                 isCorrect ? setScore(score + 1) : setScore(score);
                 if (nextIndex >= questions.length) {
-                    navigate('/score', { 
-                        state: { 
+                    handleScore(
+                        { 
                             score: score,
                             level : level,
                             language : language,
                         } 
-                    });
+                    );
                 }
                 setCurrentQuestionIndex(nextIndex);
                 setQuestion(questions[nextIndex][0]);
@@ -75,9 +80,8 @@ export default function Lesson(props) {
             
         )
         } catch(e) {
-            console.log(e);
             useEffect(() => {
-                handleLearn;
+                handleLearn();
             }, []);
-        }
+        };
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Conffeti from 'react-confetti';
 import Emote from './Emote';
 import * as data from '../const';
@@ -11,11 +11,20 @@ export default function Score() {
     const location = useLocation();
     const state = location.state;
 
-    const { handleHome, handleLearn } = data.useNavigation();
-    const navigate = useNavigate();
+    const { handleHome, handleLearn, handleLesson } = data.useNavigation();
     
     const [content, setContent] = useState('');
     const [emotion, setEmotion] = useState('');
+    const [score, setScore] = useState(0);
+
+    useEffect(() => {
+      if (state) {
+        setScore(state.score);
+        result();
+      } else {
+        handleLearn();
+      }
+    }, [state]);
 
     const result = () => {
       if (state.score >=8 ) {
@@ -29,26 +38,20 @@ export default function Score() {
         setEmotion("sad");
       }
     };
-
-    useEffect(() => {
-      result();
-      }, []);
   
     const handleTryAgain = () => {
-      navigate('/lesson', {
-        state: {
+      handleLesson(
+        {
           level : state.level,
           language : state.language,
-        }
         });
     }
 
     const handleNextLesson = () => {
-      navigate('/lesson', {
-        state: {
+      handleLesson(
+        {
           level : ((state.level == "basic") ? "medium" : (state.level == "medium") ? "advanced" : "native"),
           language : state.language,
-          }
           });
     }
   
@@ -61,13 +64,13 @@ export default function Score() {
             <Emote state={emotion} />
           </div>
         <div className="score-content">
-          <h2>You got a score of {state.score} out of 10</h2>
+          <h2>You got a score of {score} out of 10.</h2>
           <h5>{content}</h5>
           <div className="score-content-buttons">
-            <button onClick={handleLearn}>Next Lesson</button>
-            <button onClick={handleTryAgain}>Try again</button>
-            <button onClick={handleNextLesson}>Next Level</button>
-            <button onClick={handleHome}>Menu</button>
+            <button onClick={ () => handleLearn() }>Next Lesson</button>
+            <button onClick={ () => handleTryAgain() }>Try again</button>
+            <button onClick={ () => handleNextLesson() }>Next Level</button>
+            <button onClick={ () => handleHome() }>Menu</button>
           </div>
         </div>
       </div>

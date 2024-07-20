@@ -1,25 +1,22 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import Modal from './Modal';
 import * as data from '../const';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/PasswordReset.css';
 
 export default function PasswordReset() {
-    const { handleSignUp } = data.useNavigation();
+    const { handleLearn, handleSignUp } = data.useNavigation();
 
-    const [modalOpen, setModalOpen] = useState(false);
+    // const [modalOpen, setModalOpen] = useState(false);
 
-    const close = () => setModalOpen(false);
-    const open = () => setModalOpen(true);
+    // const close = () => setModalOpen(false);
+    // const open = () => setModalOpen(true);
 
     const handleSumbit = (e) => {
         e.preventDefault();
         open();
         setShowMessage(true);
         setTimeout (() => {
-            navigate('/');
+            handleLearn;
         }, 10000);
     };
 
@@ -43,7 +40,7 @@ export default function PasswordReset() {
             <div className="passwordreset-form-container">
             <div className="passwordreset-logo-container">Forgot Password</div>
 
-            <form className="passwordreset-form" onSubmit={handleSumbit}>
+            <form className="passwordreset-form" onSubmit={ () => handleSumbit() }>
                 <div className="passwordreset-form-group">
                     <label for="email">Email</label>
                 <input type="text" id="passwordreset-email" name="email" placeholder="Enter your email" required autoComplete="email"/>
@@ -52,7 +49,7 @@ export default function PasswordReset() {
                 <button className="passwordreset-form-submit-btn" type="submit">Send Email</button>
             </form>
 
-            <p className="passwordreset-signup-link">Don't have an account?<button onClick={handleSignUp} className="passwordreset-signup-link link"> Sign up now</button></p>
+            <p className="passwordreset-signup-link">Don't have an account?<button onClick={ () => handleSignUp() } className="passwordreset-signup-link link"> Sign up now</button></p>
             </div>
         </>
     );

@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import * as data from '../const';
 import '../styles/ErrorPage.css';
 
 export default function ErrorPage() {
     const [countdown, setCountdown] = useState(10);
-    const navigate = useNavigate();
 
     const { handleHome } = data.useNavigation();
 
