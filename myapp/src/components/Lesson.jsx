@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Lesson.css';
 
 export default function Lesson(props) {
-    console.log(2);
     const location = useLocation();
     const state = location.state;
 
@@ -19,7 +18,7 @@ export default function Lesson(props) {
         }, []);
 
         const level = state?.level.toLowerCase();
-        const language = (state?.language.toLowerCase() === "tagbana") ? "french" : state?.language.toLowerCase();
+        const language = state?.language.toLowerCase();
         const questions = data.questions[`${language}`][`${level}`];
         
         const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -45,7 +44,7 @@ export default function Lesson(props) {
                             language : language,
                         } 
                     );
-                }
+                };
                 setCurrentQuestionIndex(nextIndex);
                 setQuestion(questions[nextIndex][0]);
                 setIsClicked(false);
